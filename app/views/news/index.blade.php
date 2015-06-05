@@ -4,70 +4,30 @@
 @section('keywords'){{Seo::get('keywords')}}@stop
 @section('description'){{Seo::get('description')}}@stop
 @section('content')
+    @include('news.menu')
+    @include('public.register')
 
-<!-- Main -->
-
-
-<div class="main-content gray-bg">
-<div class="crumbs mainwidth">您现在的位置：<a href="http://www.mcmore.com/">商城系统</a> > <b>电商资讯</b></div>
-<!--main  --><!--行业资讯首页  -->
-<div id="main" >
-<div class="information-wrap">
-  <div class="information-con clearfix">
-    <!--左边内容-->
-    <div class="information-left">
-      <div class="information-left-wrap">
-        <!--左边选项卡标题-->
-        <div class="information-title-list">
-          <ul class="title-list clearfix tabs" id="tabs2">
-          @foreach($categories as $key => $category)
-              <li class="{{$key ===4 ? 'item-tag':''}} item-{{{ $category->code }}}">
-                  <a target="_blank" href="{{ URL::route('news.list', $category->code) }}">
-                     <h2>{{{ $category->name }}}</h2>
-                  </a>
-              </li>
-              @endforeach
-          </ul>
+    <div class="content">
+        <div class="dynamics">
+            <div class="dynamics-title">百度密谋O2O 不曾对电商死心</div>
+            <div class="dynamics-detailed">
+                <p>据麦多商城系统获悉，百度将开通O2O商城系统平台“百度MALL”。看到这里，小编不禁想到啦啦啦啦啦</p>
+                <a href="">阅读全文</a>
+            </div>
+            <div class="dynamics-time">2014-10-13 12:10</div>
+            <div class="dynamics-other">
+                <div class="browse">
+                    <img src="/img/icon/browse.png">
+                    <span class="num">112</span>
+                </div>
+                <div class="comment">
+                    <img src="/img/icon/comment.png">
+                    <span class="num">56</span>
+                </div>
+            </div>
         </div>
-
-    <div class="information-con-list-wrap">
-      <!--左边选项卡列表-->
-      <ul class="information-con-list tab_conbox2" id="tab_conbox2">
-
-         @foreach($categories as $category)
-              <li class="information-con-item " id="{{{ $category->code }}}{{ $key===0 ? ' active' : '' }}">
-                  <ul class="information-sec-item-list">
-                      @include('news.partials.news', ['type'=>$category->code, 'items'=>$category->articles])
-                  </ul>
-              </li>
-              @endforeach
-
-      </ul>
-      <!--左边选项卡列表 end-->
-    </div>
-      </div>
-
     </div>
 
-    <!--右边内容-->
-    <div class="information-right" >
-      <div class="right-con">
 
-        <!--文章排行-->
-         @include('news.blocks.charts')
-
-        <!--电商资讯推荐阅读-->
-          @include('news.blocks.recommends')
-
-            <!--热门标签-->
-        @include('news.blocks.tags')
-
-      </div>
-    </div>
-  </div>
-
-</div>
-</div>
-</div>
 
 @stop

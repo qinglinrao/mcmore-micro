@@ -26,7 +26,7 @@ Route::group(array('before' => 'seorules.before'), function() {
 
     //专题开发平台 开发类型 页面相关
     //专题pages页面相关
-    Route::get('{page_code}', array('as' => 'pages', 'uses' => 'PagesController@getPage'))->where('page_code', '((pc|o2o|wx|dyh)shop)');
+    Route::get('{page_code}', array('as' => 'pages', 'uses' => 'PagesController@getPage'))->where('page_code', '(pc|o2o|wx|dyh)');
 
     // 行业解决方案
     Route::get('fangan', array('as' => 'fangan', 'uses' => 'SolutionsController@getIndex'));
@@ -64,14 +64,14 @@ Route::group(array('before' => 'seorules.before'), function() {
 
 
     //麦多商城产品
-    Route::get('ydds/{type?}',array('as' =>'ydds','uses' =>'YddsController@getYdds'));
-
+    Route::get('ydds/{id?}',array('as' =>'ydds','uses' =>'YddsController@getYdds'))->where('id', '\d+');
     //模板
     Route::get('moban',array('as' =>'moban','uses' =>'MobanController@getMobanIndex'));
 
 
     //服务
     Route::get('service',array('as' =>'service','uses' =>'ServiceController@getService'));
+    Route::get('service/{id?}',array('as' =>'service.detail','uses' =>'ServiceController@getServiceDetail'))->where('id', '\d+');
 
 //关于麦多
 

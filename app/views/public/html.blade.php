@@ -15,11 +15,10 @@
              <meta name="keywords" content="@yield('keywords')"/>
               <meta name="description" content="@yield('description')"/>
               <meta name="author" content=" 麦多商城系统| www.mcmore.com" />
-
             <link href="{{AppHelper::asset("/favicon.ico")}}" type="text/css" rel="stylesheet" />
 
                {{AppHelper::assets([
-                        'css/webapp.css',
+                        'css/webapp.css','css/message.css'
                     ], '.css')}}
 
 
@@ -29,7 +28,7 @@
 <div id="main">
 @include('public.header')
 
-@if(Request::is('/') || Request::is('function*') || Request::is('service*') || Request::is('case*'))
+@if(Request::is('/') || Request::is('function*') || Request::is('service') || Request::is('case*'))
     @include('public.menu1')
 @endif
 
@@ -42,16 +41,15 @@
 </div>
 {{AppHelper::assets([
         'js/jquery.min.js',
+    /*  'js/consult_form.js',*/
         'js/jquery.ScrollPic.js',
         'js/webapp.js',
-         'js/sco/sco.message.js',
+/*         'js/sco/sco.message.js',
         'js/sco/sco.modal.js',
         'js/sco/sco.panes.js',
-        'js/sco/sco.tab.js',
+        'js/sco/sco.tab.js',*/
    ], '.js')}}
 @yield('scripts')
-
-
 
  </body>
 </html>

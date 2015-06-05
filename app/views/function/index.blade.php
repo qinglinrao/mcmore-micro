@@ -3,9 +3,7 @@
 @section('keywords'){{Seo::get('keywords')}}@stop
 @section('description'){{Seo::get('description')}}@stop
 @section('content')
-    <div id="register">
-        <a href=""><img id="reg-img" src="/img/icon/register.png"></a>
-    </div>
+    @include('public.register')
 
 
     <div id="main-content">

@@ -1,21 +1,17 @@
-<ul class="case-con-list clearfix">
+@foreach($cases as $k=>$case)
+<li>
+    <div class="case-box case-left">
 
- @if(isset($cases))
-@foreach($cases as $k=> $case)
-    <li class="case-con-item">
-         <div class="case-con-img">
-              <a target="_blank" href="{{URL::route('case.detail', array('id'=> $case->id))}}">
-                  {{AppHelper::img($case->images->first()->url,$case->images->first()->alt)}}
-                  <span class="cover"></span>
-              </a>
-                  <span class="triangle"></span>
-          </div>
-          <div class="case-con-bottom">
-              <div class="case-con-title"><span>名称：</span><a target="_blank" href="{{URL::route('case.detail', array('id'=> $case->id))}}">{{ $case->name }}</a></div>
-              {{--<div class="case-content"><span class="label">类型：</span><span class="con">{{AppHelper::outputAttr($case->attributes,'type')}}</span></div>--}}
-              <div class="case-content"><span class="label">评论：</span><span class="con">{{$case->latestcomment[0]->detail ? AppHelper::ellipse($case->latestcomment[0]->detail,35) : '暂无评论'}}</span></div>
-          </div>
-    </li>
+        <a href="{{URL::route('case.detail',1)}}" target="_blank">
+            <div class="case-img">
+                <img src="/img/case-1.jpg" width="100%" height="100%">
+            </div>
+            <div class="case-text">
+                <p class="case-title">恒大报</p>
+                <div class="summary">摘要: <b>团购商城是中国知名的中国团购网站团购商城是中国知名的中国团购网站团购商城是中国知名的中国团购网站</b></div>
+                <div class="comment">评论: <b>因为工作，我们经常要到外地出差，现在因为工作，我们经常要到外地出差，现在因为工作，我们经常要到外地出差，现在</b></div>
+            </div>
+        </a>
+    </div>
+<li>
 @endforeach
-@endif
-</ul>

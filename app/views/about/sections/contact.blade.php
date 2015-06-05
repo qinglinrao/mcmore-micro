@@ -1,19 +1,12 @@
- <div class="au-left">
-           <div class="title">
-             <span>联系我们</span>
-           </div>
-
-           <div class="content">
-           <h1>联系我们</h1>
-            <p>广州麦多网络科技有限公司</p>
-            <p>广州·香港</p>
-            <p>客服热线：4008-388-381</p>
-           	 <p>微信：</p>
-           	 <img src="/sunnsoft/images/erweima.jpg">
-
-           </div>
-
-          </div>
-          
+<div id="contact">
+    <div class="company">广州麦多网络科技有限公司</div>
+    <div class="company-add">广州·香港</div>
+    <div class="company-tel">客服热线：4008-388-381</div>
+    <div class="company-wechat">微信：mcmore888 </div>
+</div>
+<div id="contact-code">
+    <p>关注我们</p>
+    <img src="/img/QR-code.png">
+</div>
 
         

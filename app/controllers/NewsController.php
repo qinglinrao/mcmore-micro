@@ -26,7 +26,7 @@ class NewsController extends BaseController {
         $recommends     = Article::with('img')->rand()->recommendList(['hynews', 'ydnews', 'yxnews', 'faq', 'ghnews'])->rand()->take(6)->get();
         $hot_tags       = Recommend::with('tag')->whereRecommendTypeCode('hot_tag')->get();
 
-        $weekly_list    = Article::where('category_code','!=','faq')->where('category_code','!=','fangan')->orderBy('view_count',desc)->visible()->take(6)->get();
+        $weekly_list    = Article::where('category_code','!=','faq')->where('category_code','!=','fangan')->orderBy('view_count','desc')->visible()->take(6)->get();
 
         $monthly_list   = Statistic::articleMonthlyList()->take(6)->get();
 

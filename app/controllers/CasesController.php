@@ -18,7 +18,7 @@ class CasesController extends BaseController {
         
      
         
-        $cases = Work::with('images', 'latestcomment')->type('work')->visible()->paginate(8);
+        $cases = Work::with('images', 'latestcomment')->type('work')->visible()->paginate(4);
 
         //加载更多
         if (Request::wantsjson()) {

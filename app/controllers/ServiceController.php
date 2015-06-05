@@ -12,6 +12,12 @@ class ServiceController extends \BaseController {
         return View::make('service.index');
 	}
 
+    public function getServiceDetail($id)
+    {
+
+        return View::make('service.detail',compact('id'));
+    }
+
 
 	/**
 	 * Show the form for creating a new resource.

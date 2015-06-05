@@ -6,9 +6,9 @@
                         <div class="appcase-con-img">
                             <a href="{{'case.detail',$case->id}}">
                                 {{AppHelper::img($case->images[0]->url,$case->images[0]->alt,array("width"=>290,"height"=>240))}}
-                               <!--  <img src="/libraries/sunnsoft/images/case01.jpg"/>  --> 
-                                
-                            
+                               <!--  <img src="/libraries/sunnsoft/images/case01.jpg"/>  -->
+
+
                             </a>
                             <span></span>
                         </div>
@@ -23,7 +23,7 @@
                   <!--   <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case02.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case02.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -36,7 +36,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case03.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case03.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -49,7 +49,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case04.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case04.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -62,7 +62,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case01.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case01.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -75,7 +75,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case02.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case02.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -88,7 +88,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case03.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case03.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -101,7 +101,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case04.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case04.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -114,7 +114,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case01.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case01.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -127,7 +127,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case02.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case02.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -140,7 +140,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case03.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case03.jpg"/>
                             </a>
                             <span></span>
                         </div>
@@ -153,7 +153,7 @@
                     <li class="appcase-con-item">
                         <div class="appcase-con-img">
                             <a href="#">
-                                <img src="/libraries/sunnsoft/images/case04.jpg"/>  
+                                <img src="/libraries/sunnsoft/images/case04.jpg"/>
                             </a>
                             <span></span>
                         </div>

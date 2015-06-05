@@ -6,9 +6,7 @@
 
 @section('content')
 
-    <div id="register">
-        <a href=""><img id="reg-img" src="/img/icon/register.png"></a>
-    </div>
+   @include('public.register')
 
     <div class="section cd-s1">
         <div id="cd-s1-title">麦多商城系统</div>

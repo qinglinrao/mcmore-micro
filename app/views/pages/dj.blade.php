@@ -10,6 +10,8 @@
         <div class="tr-tel">4008-388-381</div>
         <div id="register-form">
             <form method="post">
+                <p class="form-tip">{{$errors->first()}}</p>
+                <input type="hidden" name="type" value="try" />
                 <input type="text" name="name" placeholder="请输入您的姓名" />
                 <input type="text" name="mobile" placeholder="请输入您的联系电话" />
                 <input type="text" name="email" placeholder="请输入您的邮箱" />
@@ -24,6 +26,11 @@
 
 @section('scripts')
     @parent
-    {{HTML::script('/js/consult_form.js')}}
+    {{HTML::script('js/consult_form.js')}}
+    {{HTML::script('js/sco/sco.message.js')}}
+    {{HTML::script('js/sco/sco.modal.js')}}
+    {{HTML::script('js/sco/sco.panes.js')}}
+    {{HTML::script('js/sco/sco.tab.js')}}
 @stop
+
 

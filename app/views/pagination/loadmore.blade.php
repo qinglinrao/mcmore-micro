@@ -3,15 +3,14 @@ $presenter = new Illuminate\Pagination\BootstrapPresenter($paginator);
 ?>
 
 <?php if ($paginator->getLastPage() > 1): ?>
-    <div class="loadmore load-more">
-        <a href="javascript:void(0)" class="loadmore-data more" data-page="<?php echo $paginator->getCurrentPage(); ?>" rel="nofollow"><?php echo $paginator->getCurrentPage() >= $paginator->getLastPage() ? '没有了' : '点击加载更多'; ?></a>	
-    </div>
-    @section('scripts')
+<div class="loadmore load-more">
+    <a href="javascript:void(0)" class="loadmore-data more" data-page="<?php echo $paginator->getCurrentPage(); ?>" rel="nofollow"><?php echo $paginator->getCurrentPage() >= $paginator->getLastPage() ? '没有了' : '点击加载更多'; ?></a>
+</div>
+@section('scripts')
     <script type="text/javascript">
-
-		(function($) {
+        (function($) {
             $(document).ready(function() {
-               
+
                 var lastPage = <?php echo $paginator->getLastPage(); ?>;
                 var data_wrapper = $('[data-role="data-wrapper"]');
 
@@ -31,7 +30,7 @@ $presenter = new Illuminate\Pagination\BootstrapPresenter($paginator);
                         success: function(result) {
                             if (result.data) {
 
-								$(result.data).appendTo($(data_wrapper));
+                                $(result.data).appendTo($(data_wrapper));
 
                                 if (nextPage < lastPage) {
                                     $el.text('更多')
@@ -48,5 +47,5 @@ $presenter = new Illuminate\Pagination\BootstrapPresenter($paginator);
             })
         })(jQuery)
     </script>
-    @stop
+@stop
 <?php endif; ?>

@@ -1,19 +1,12 @@
 @extends('public.html')
 
-@section('title'){{AppHelper::tdk('title',$case)}}@stop
-@section('keywords'){{AppHelper::tdk('keywords',$case)}}@stop
-@section('description'){{AppHelper::tdk('description',$case)}}@stop
+@section('title'){{ Seo::get('title')}}@stop
+@section('keywords'){{Seo::get('keywords')}}@stop
+@section('description'){{Seo::get('description')}}@stop
 
 @section('content')
-
-<div class="banner mainwidth">
-              <div class="banimg">
-                <img src="/sunnsoft/images/banner01.jpg">
-              </div>
-            </div><!-- banner -->
-
-
-	@include("pages.sections.$code",compact('code'))
-
-          
-@stop
+@include('public.menu3')
+@include('public.register')
+@include("pages.micro.$code",compact('code'))
+@include('public.contact')
+  @stop

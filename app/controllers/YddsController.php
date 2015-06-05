@@ -7,13 +7,31 @@ class YddsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function getYdds($type=1)
+	public function getYdds($id=1)
 	{
 
 
         $cases = Work::with('images', 'latestcomment', 'attributes.group')->type('work')->rand()->take(4)->get();
 
-        return View::make('ydds.index')->with('cases',$cases);
+        switch ($id) {
+            case  1 :
+                return View::make('ydds.index')->with('cases',$cases);
+                break;
+            case  2 :
+                return View::make('ydds.index2')->with('cases',$cases);
+                break;
+            case  3 :
+                return View::make('ydds.index3')->with('cases',$cases);
+                break;
+            case  4 :
+                return View::make('ydds.index4')->with('cases',$cases);
+                break;
+            case  5 :
+                return View::make('ydds.index5')->with('cases',$cases);
+                break;
+        }
+
+
 	}
 
 

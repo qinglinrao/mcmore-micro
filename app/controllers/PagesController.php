@@ -15,9 +15,6 @@ class PagesController extends BaseController {
 
     public function getConsult()
     {
-
-
-
         return View::make('pages.consult',compact('active_menu'));
     }
 
