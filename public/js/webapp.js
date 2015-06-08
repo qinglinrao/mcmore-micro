@@ -57,9 +57,9 @@ function _hideLoader()
         productDetailTab()
 
         // Icheck
-        $('input').iCheck({
-            checkboxClass: 'icheckbox'
-        });
+        //$('input').iCheck({
+        //    checkboxClass: 'icheckbox'
+        //});
 
         //结算页面
         $('.confirm-buy').on("tap", function() {

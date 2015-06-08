@@ -42,7 +42,7 @@
     <div class="menu-2" class="clearfix">
     <ul class="list-unstyle">
         <li>
-            <a class="active ui-link" href="http://localhost:8000/ydds">快速搭建</a>
+            <a class=" ui-link" href="http://localhost:8000/ydds">快速搭建</a>
         </li>
         <li>
             <a class=" ui-link" href="http://localhost:8000/ydds/2">极致体验</a>
@@ -51,40 +51,76 @@
             <a class=" ui-link" href="http://localhost:8000/ydds/3">强大营销</a>
         </li>
         <li>
-            <a class=" ui-link" href="http://localhost:8000/ydds/4">丰富功能</a>
+            <a class="active ui-link" href="http://localhost:8000/ydds/4">丰富功能</a>
         </li>
         <li>
             <a class=" ui-link" href="http://localhost:8000/ydds/5">贴心服务</a>
         </li>
     </ul>
 </div>
-
     <div id="register">
         <a href=""><img id="reg-img" src="/img/icon/register.png"></a>
     </div>
 
-    <div class="section cd-s1">
-        <div id="cd-s1-title">麦多商城系统</div>
-        <div id="cd-s1-en">Online Mall system</div>
-        <div class="cd-s1-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;麦多手机商城系统采用行业先进的HTML5技术，与传统意义上的WAP手机商城不同，麦多手机电商系统使你的手机网店更加接近手机APP界面，界面交互完美而且功能完善。支持二维码快速扫码访问手机商城，支持手机商城可视化编辑，能随意拖拽商城模块，个性化装修手机商城网店。</div>
-        <div id="cd-s1-img">
-            <img src="/img/quick-build-1.png" width="90%" height="auto">
+    <div id="content">
+        <div id="rich-function-title">
+            <div id="rf-content-title-1">麦多手机商城系统功能</div>
+            <div id="rf-content-title-2">全面的商城系统功能模块</div>
+        </div>
+
+        <div class="rf-section">
+            <div class="rf-title">基础功能</div>
+            <div class="rf-title-en">Basic functions</div>
+            <div class="rf-icon">
+                <img src="/img/function-1.png" width="92%">
+            </div>
+        </div>
+        <div class="rf-section">
+            <div class="rf-title">活动营销功能</div>
+            <div class="rf-title-en">Event marketing function</div>
+            <div class="rf-icon">
+                <img src="/img/function-2.png" width="92%">
+            </div>
+        </div>
+        <div class="rf-section">
+            <div class="rf-title">粉丝互动营销</div>
+            <div class="rf-title-en">Fans interactive marketing</div>
+            <div class="rf-icon">
+                <img src="/img/function-3.png" width="90%">
+            </div>
+        </div>
+        <div class="rf-section">
+            <div class="rf-title">CRM功能</div>
+            <div class="rf-title-en">The function of CRM</div>
+            <div class="rf-icon">
+                <img src="/img/function-4.png" width="93%">
+            </div>
+        </div>
+        <div class="rf-section">
+            <div class="rf-title">数据功能</div>
+            <div class="rf-title-en">Data function</div>
+            <div class="rf-icon">
+                <img src="/img/function-5.png" width="90%">
+            </div>
+        </div>
+        <div class="rf-section">
+            <div class="rf-title">个性定制</div>
+            <div class="rf-title-en">Personality customization</div>
+            <div class="rf-icon">
+                <img src="/img/function-6.png" width="94%">
+            </div>
+        </div>
+        <div class="rf-section">
+            <div class="rf-title">接口拓展</div>
+            <div class="rf-title-en">Interface development</div>
+            <div class="rf-icon">
+                <img src="/img/function-7.png" width="94%">
+            </div>
         </div>
     </div>
 
-    <div class="section s2">
-        <div class="cd-s2-title">快速、免搭建移动商城系统</div>
-        <div class="cd-s2-text">    采用SAAS模式，即开即用，无需开发，无需等待，即可开启您的电商之旅。</div>
-        <div class="cd-s2-img">
-            <img src="/img/quick-build-2.png" width="95%" height="auto">
-        </div>
-    </div>
-    <div class="section s2">
-        <div class="cd-s2-title">灵活拓展，未来拥有更多可能</div>
-        <div class="cd-s2-text">      麦多手机商城系统将在未来推出丰富的可拓展插件，您可以根据自身手机商城发展需求灵活选择合适自己的商城插件进行拓展，再也不必被平台框住，想拓就拓。</div>
-        <div class="cd-s2-img">
-            <img src="/img/quick-build-3.png" width="83%" height="auto">
-        </div>
+    <div id="gotop" class="rf-up" style="display: none">
+        <a href="#"><img src="/img/up.png"></a>
     </div>
 <div id="footer">
     <div id="telephone">
@@ -109,6 +145,22 @@
 <script src="http://localhost:8000/js/sco/sco.panes.js"></script>
 <script src="http://localhost:8000/js/sco/sco.tab.js"></script>
 
+    
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 100){
+                    $('#gotop').css('display','block');
+                }else{
+                    $('#gotop').css('display','none');
+                }
+            });
+
+            $("#gotop").click(function(){
+                $('body,html').animate({scrollTop:0},500);
+            });
+        });
+    </script>
 
 
 

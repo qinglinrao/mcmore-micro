@@ -16,8 +16,6 @@ class CasesController extends BaseController {
         
         $attrGroups = AttributeGroup::with('attributes')->whereIn('code',['platform','industry','type'])->get();
         
-     
-        
         $cases = Work::with('images', 'latestcomment')->type('work')->visible()->paginate(4);
 
         //加载更多

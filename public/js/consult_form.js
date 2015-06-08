@@ -1,6 +1,5 @@
-;(function ($) {
+(function ($) {
     $(document).ready(function () {
-        alert(8);
         $('#register-form form').submit(function () {
             var consulting = false;
             $submitField = $('#register-form .message-submit')
@@ -22,7 +21,7 @@
                 },
                 success: function (result) {
 
-                	if (result.state == 1) {
+                    if (result.state == 1) {
                         $.scojs_message('留言成功！', $.scojs_message.TYPE_OK);
                         $('#register-form form')[0].reset()
                     } else if (result.state == 0) {
