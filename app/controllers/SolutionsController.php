@@ -10,7 +10,7 @@ class SolutionsController extends BaseController {
     public function getIndex()
     {
 
-      $solutions = Article::categorys('fangan')->visible()->published()->paginate(12);
+      $solutions = Article::categorys('fangan')->visible()->published()->paginate(4);
 
 
 

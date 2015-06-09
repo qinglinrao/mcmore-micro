@@ -83,7 +83,7 @@
                     <li>
                         <div class="custom cus-left">
                             <div class="cus-icon">
-                                <a href="{{URL::route('pages',array('page_code'=>'o2o'))}}">
+                                <a href="{{URL::route('pages',array('page_code'=>'o2oshop'))}}">
                                     <img src="/img/service-5.png" width="100%" height="100%">
                                 </a>
                             </div>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="custom cus-right">
                             <div class="cus-icon">
-                                <a href="{{URL::route('pages',array('page_code'=>'dyh'))}}">
+                                <a href="{{URL::route('pages',array('page_code'=>'dyhshop'))}}">
                                     <img src="/img/service-6.jpg" width="100%" height="100%">
                                 </a>
                             </div>
@@ -102,7 +102,7 @@
                     <li>
                         <div class="custom cus-left">
                             <div class="cus-icon">
-                                <a href="{{URL::route('pages',array('page_code'=>'pc'))}}">
+                                <a href="{{URL::route('pages',array('page_code'=>'pcshop'))}}">
                                     <img src="/img/service-7.jpg" width="100%" height="100%">
                                 </a>
                             </div>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="custom cus-right">
                             <div class="cus-icon">
-                                <a href="{{URL::route('pages',array('page_code'=>'wx'))}}">
+                                <a href="{{URL::route('pages',array('page_code'=>'wxshop'))}}">
                                     <img src="/img/service-8.jpg" width="100%" height="100%">
                                 </a>
                             </div>

@@ -1,9 +1,9 @@
 @foreach($items as $key => $item)
-    <li>
-        <div class="clearfix name-time">
-            <p class="name">{{$item->name}}</p>
-            <p class="time"><span>{{Carbon::parse($item->updated_at)->format('Y-m-d')}} </span>发表</p> </div>
-            <p class="con">{{{$item->detail}}}</p>
-
-    </li>
+<div class="user-comment">
+    <div class="comment-top">
+        <div class="user-name">{{$item->name}}</div>
+        <div class="comment-time">{{Carbon::parse($item->updated_at)->format('Y-m-d')}} 发表</div>
+    </div>
+    <div class="comment-detailed">{{{$item->detail}}}</div>
+</div>
 @endforeach

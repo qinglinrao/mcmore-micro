@@ -26,7 +26,7 @@ Route::group(array('before' => 'seorules.before'), function() {
 
     //专题开发平台 开发类型 页面相关
     //专题pages页面相关
-    Route::get('{page_code}', array('as' => 'pages', 'uses' => 'PagesController@getPage'))->where('page_code', '(pc|o2o|wx|dyh)');
+    Route::get('{page_code}', array('as' => 'pages', 'uses' => 'PagesController@getPage'))->where('page_code', '(pc|o2o|wx|dyh)shop');
 
     // 行业解决方案
     Route::get('fangan', array('as' => 'fangan', 'uses' => 'SolutionsController@getIndex'));

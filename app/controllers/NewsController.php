@@ -14,7 +14,6 @@ class NewsController extends BaseController {
     public function getIndex()
     {
         $categories = Category::whereIn('code', ['hynews', 'ydnews', 'yxnews', 'faq', 'ghnews'])->get();
-
         foreach($categories as $key => $category)
         {
             $categories[$key]->articles = Article::with('category', 'img', 'comments', 'tags')
@@ -23,6 +22,7 @@ class NewsController extends BaseController {
                 ->get();
         }
 
+        $code = $category->code;
         $recommends     = Article::with('img')->rand()->recommendList(['hynews', 'ydnews', 'yxnews', 'faq', 'ghnews'])->rand()->take(6)->get();
         $hot_tags       = Recommend::with('tag')->whereRecommendTypeCode('hot_tag')->get();
 
@@ -31,7 +31,7 @@ class NewsController extends BaseController {
         $monthly_list   = Statistic::articleMonthlyList()->take(6)->get();
 
         return View::make('news.index', compact(
-            'active_menu', 'categories', 'recommends', 'hot_tags', 'weekly_list', 'monthly_list'
+            'active_menu', 'categories', 'recommends', 'hot_tags', 'weekly_list', 'monthly_list','code'
         ));
     }
 

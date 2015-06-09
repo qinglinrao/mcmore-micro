@@ -42,7 +42,7 @@
 {{AppHelper::assets([
         'js/jquery.min.js',
     /*  'js/consult_form.js',*/
-        'js/jquery.ScrollPic.js',
+        'js/jquery.ScrollPic.js ',
         'js/webapp.js',
 /*         'js/sco/sco.message.js',
         'js/sco/sco.modal.js',

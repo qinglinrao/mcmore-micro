@@ -1,148 +1,111 @@
 @extends('public.html')
-@section('title'){{AppHelper::tdk('title',$article)}}@stop
-@section('keywords'){{AppHelper::tdk('keywords',$article)}}@stop
-@section('description'){{AppHelper::tdk('description',$article)}}@stop
 
-@section('scripts')
-<script type="text/javascript">
-    (function($) {
-        $.ajax({
-            url: '<?php echo URL::route("news.update", array("id" => $article->id)) ?>'
-        })
-    })(jQuery)
-</script>
-@stop
+@section('title'){{ Seo::get('title')}}@stop
+@section('keywords'){{Seo::get('keywords')}}@stop
+@section('description'){{Seo::get('description')}}@stop
 @section('content')
-    <div class="main-content gray-bg">
-           <div class="crumbs mainwidth">您现在的位置：<a href="http://www.mcmore.com/">商城系统</a> >
-           <a href="{{URL::route('news')}}">电商资讯</a> >
-           <a href="{{ URL::route('news.list', $article->category->code) }}">
-            {{{ $article->category->name }}}</a> >
-            <b>{{{ $article->name }}}</b>
+    <div id="main">
+        <div id="dynamics-detailed-header">
+            <div class="ddh-back-arrow">
+                <a href="">
+                    <img src="/img/icon/left-arrow.png">
+                </a>
+            </div>
+            <div class="ddh-title"><p>百度密谋O2O 不曾对电商死心</p></div>
+            <div class="ddh-share">
+                <a href="">
+                    <img src="/img/icon/share.png">
+                </a>
+            </div>
+        </div>
 
-           </div>
-              <!--main  --><!--行业资讯详情页 -->
-              <div id="main" >
-                <div class="information-wrap">
-                  <div class="information-con clearfix">
-                    <div class="information-left">
-                      <!--左边文章详情-->
-                      <div class="article-wrap">
-                        <h1 class="article-title"> {{{ $article->name }}}</h1>
-                        <div class="article-info clearfix">
-                          <div class="info-left">
-                            <span class="time">{{ Carbon::parse($article->updated_at)->format('Y-m-d H:i') }}</span>
+        <div id="dynamics-brief">
+            <div class="dynamics-brief-title">
+                百度密谋O2O 不曾对电商死心
+            </div>
+            <div class="dynamics-brief-text"><b>摘要：</b>据麦多商城系统获悉，百度将开通电商O2O商城系统平台“百度MALL”。看到这里，小编忍不住想说，电商虐百度千百遍,百度待电商入初恋呢。回归百度这些年来的电商发展历史，可谓是屡战屡败，没有任何起色。</div>
+            <div id="dynamics-brief-other">
+                <div id="dynamics-brief-time">2014-10-13 12:10</div>
+                <div id="dynamics-brief-comment">56</div>
+                <div id="dynamics-brief-browse">112</div>
+            </div>
+        </div>
+        <div class="dynamics-details-detailed">
+            <div class="dynamics-detailed-text">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据麦多商城系统获悉，百度将开通电商O2O商城系统平台“百度MALL”。看到这里，小编忍不住想说，电商虐百度千百遍,百度待电商入初恋呢。回归百度这些年来的电商发展历史，可谓是屡战屡败，没有任何起色。</p>
+                <br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;早在2208年，百度就已经推出了O2O网购平台百度有啊，期间有啊曾关闭，也曾上线，但是百度有啊在这些年里一直也没有给百度在O2O电商带来实质的发展。2010年，百度也和日本电商巨头乐天合作过，建设了网上购物商城系统，品牌是“乐酷天”，但是在2012年就夭折了。直到2014年，百度的爱乐活再次向B2C电商转型，但是也没有很大的发展，甚至在行业内的影响和存在感都急剧下降。百度此次的O2O项目主要是通过邀请商家入驻，经营模式主要是以线上销售品牌产品，与线下实体店结合的方式。</p>
+            </div>
+        </div>
 
-                          </div>
-                          <div class="info-right">
-                            <span class="view-count"> {{ $article->view_count }}</span>
-                            <span class="comment-count"> {{$comments->count()}}</span>
-                          </div>
-                        </div>
-                        <div class="article-con" id="editor">
-                          <div class="article-sum">
-                              @if($article->category_id == 8)
-                            <p><span>问题补充：</span>
-                                {{AppHelper::ellipse($article->instruction,125)}}
-                            </p>
-                             @else
-                             <p><span>摘要：</span>
-                                 {{AppHelper::ellipse($article->brief,125)}}
-                             </p>
-                              @endif
+        <div class="last-next sd-last-next">
+            <a href="">
+                <div class="last-one"><b>上一篇：</b>“小日子”获千万天使投资 打造O2O文艺平台</div>
+            </a>
+            <a href="">
+                <div class="next-one"><b>下一篇：</b>劲霸男装总经理转战女装电商 加入Lily女装</div>
+            </a>
+        </div>
 
+        <div class="recommend-news">
+            <div class="recommend-news-title">电商资讯相关推荐</div>
+            <div class="recommend-news-list">
+                <ul>
+                    <li>
+                        <a href="">
+                            用独立微信商城系统创业的优势
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            php商城系统相关知识普及
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            建立在商城系统上的o2o餐饮品牌出路在哪？
+                        </a>
+                    </li>
 
-                          </div>
-                          <div class="article-con-text">
-                            {{ $article->detail }}
-                          </div>
-                        </div>
-                        <div class="caveat"><i>声明：</i>文章"<span>{{{ $article->name }}}</span>"为<麦多<a href="http://www.mcmore.com/">商城系统</a>>原创文章，转载请注明出处,谢谢合作！</div>
-                        <!--左边分享及标签-->
-                        <div class="article-bottom">
-                          <div class="article-bottom-wrap clearfix">
-                            <div class="article-bottom-left">
-                              @if(count($article->tags))
-                                 <span>
-                                     标签：
-                                 </span>
-                                 @foreach($article->tags as $tag)
-                                 <a href="{{ URL::route('news.tag', $tag->id) }}">{{{ $tag->name }}}</a>
-                                 @endforeach
-                                 @endif
-
+                </ul>
+            </div>
+        </div>
+        <div class="cd-comment">
+            <div class="comment-title">
+                全部评论
+                <span></span>
+            </div>
+            <div id="comment-list">
+                <ul>
+                    <li>
+                        <div class="user-comment">
+                            <div class="comment-top">
+                                <div class="user-name">遇见</div>
+                                <div class="comment-time">2015-03-25 发表</div>
                             </div>
-                            <div class="share-icons">
-                              <table>
-                                  <tr>
-                                <td>分享到：</td>
-                                <td><a class="jiathis_button_tsina"></a></td>
-                                <td><a class="jiathis_button_tqq"></a></td>
-                                <td><a class="jiathis_button_qzone"></a></td>
-                                <td><a class="jiathis_button_douban"></a></td>
-                                <td><a class="jiathis_button_renren"></a></td>
-                                <td><a class="jiathis_button_weixin"></a></td>
-                                <td><a rel="nofollow" href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a></td>
-                                  </tr>
-                              </table>
-                            <!-- JiaThis Button END -->
-                            </div>
-                          </div>
-
-                          <div class="next-previous">
-                            <p class="prev">上一篇：<span>
-                            {{ $previous->id ? HTML::link(LinkHelper::news_detail($previous, true), AppHelper::ellipse($previous->name,40),[ 'target'=>'_blank']) : '没有了'}}
-                            </span>
-                            </p>
-                            <p class="next">下一篇： {{ $next->id ? HTML::link(LinkHelper::news_detail($next, true), AppHelper::ellipse($next->name,40),[ 'target'=>'_blank']) : '没有了'}}</p>
-                          </div>
+                            <div class="comment-detailed">多种团购服务集于一体，使用起来非常的方便。尤其是一些高频次的团购服务内容，像是美食、电影、KTV等，是很赞的一个团购商城。</div>
                         </div>
-                      </div>
-                      <!--相关阅读推荐-->
-                      <div class="recommended">
-                        <div class="detail-title" ><span>相关阅读推荐<i class="line"></i></span></div>
+                    </li>
+                    <li>
+                        <div class="user-comment">
+                            <div class="comment-top">
+                                <div class="user-name">流连忘返</div>
+                                <div class="comment-time">2015-03-25 发表</div>
+                            </div>
+                            <div class="comment-detailed">商城网站案例棒棒哒！</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-                        <ul>
-                          @include('news.partials.relate', ['items'=>$relates])
-                        </ul>
-                      </div>
-                      <!--评论-->
-                    @include('news.blocks.comments')
+            <div id="i-want-comment">
+                <form>
+                    <input type="text" name="comment" placeholder="请输入点评内容">
+                </form>
+            </div>
+        </div>
 
-
-                    </div>
-
-                    <div class="information-right" >
-                      <div class="right-con">
-                        <!--电商最新资讯-->
-
-                        @if(!in_array($type, ['faq','fangan']))
-                            @include('news.blocks.latests')
-                            @include('news.blocks.charts')
-                            @include('news.blocks.recommends')
-                        @elseif($type === 'fangan')
-                            @include('news.blocks.platforms')
-                            @include('news.blocks.solutions')
-                            @include('news.blocks.types')
-                            @include('news.blocks.cases')
-                        @else
-                            @include('news.blocks.latest_faqs')
-                            @include('news.blocks.hot_faqs')
-                             @include('news.blocks.recommends')
-                        @endif
-     <!--电商资讯推荐阅读-->
-             </div>
-                  </div>
+    </div>
 
 
-                  </div>
-
-                </div>
-
-              </div>
- </div>
-
-
-             <!--main -end-->
-@stop
 @stop

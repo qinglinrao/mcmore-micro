@@ -1,24 +1,13 @@
+<div class="cd-comment">
+    <div class="comment-title" data-role="data-wrapper">热门评论</div>
 
- <div class="comment margin-top">
- @if($comments->count())
-<div class="top-comment">
-      <div class="top-comment-wrap">
-        <h3 class="detail-title" ><span>热门评论<i class="line"></i></span></h3>
-        <div class="top-comment-con">
-          <ul   data-role="data-wrapper">
-
-            @include('news.partials.comment', ['items'=>$comments])
-
-          </ul>
-          <div class="top-comment-more">
-           {{$comments->links()}}
-          </div>
-        </div>
-      </div>
+    @if($comments->count())
+        @include('news.partials.comment', ['items'=>$comments])
+    @endif
+    {{$comments->links()}}
+    <div id="i-want-comment">
+        <form>
+            <input type="text" name="comment" placeholder="请输入点评内容">
+        </form>
+    </div>
 </div>
-@endif
-    <iframe scrolling="no" seamless id="comment-frame" src="{{URL::route('case.comment',$case->id)}}"></iframe>
-
-</div>
-
-
