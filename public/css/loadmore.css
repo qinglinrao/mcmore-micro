@@ -1,0 +1,20 @@
+/* line 525, ../sass/information.scss */
+a:link, a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+.load-more {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 20px;
+}
+/* line 528, ../sass/information.scss */
+.load-more a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ebebeb;
+}

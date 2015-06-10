@@ -4,7 +4,7 @@
 @section('keywords'){{Seo::get('keywords')}}@stop
 @section('description'){{Seo::get('description')}}@stop
 @section('content')
-    @include('cases.menu')
+    @include('news.menu')
     @include('public.register')
 
 

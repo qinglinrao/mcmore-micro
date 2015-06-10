@@ -18,6 +18,6 @@ class LinkHelper
         if($return_link)
             return $link;
         else
-            return HTML::link($link, $new->name, ['title'=>$new->name, 'target'=>'_blank']);
+            return HTML::link($link, $new->name, ['title'=>$new->name]);
     }
 }

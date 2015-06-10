@@ -5,7 +5,9 @@
         <a href="{{URL::route('case.detail', array('id'=> $case->id))}}">
             <div class="case-img">
                 {{--<img src="/img/case-1.jpg" width="100%" height="100%">--}}
+
                 {{AppHelper::img($case->images->first()->url,$case->images->first()->alt,array('width'=>'100%','height'=>'100%'))}}
+
             </div>
             <div class="case-text">
                 <p class="case-title"><a href="{{URL::route('case.detail', array('id'=> $case->id))}}">{{ $case->name }}</a></p>

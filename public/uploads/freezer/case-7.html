@@ -104,44 +104,30 @@
             <div class="next-one"><b>下一篇：</b><a href="http://localhost:8000/case-8" target="_blank">广铝手机商城案例</a></div>
         </a>
     </div>
-
     <div class="cd-comment">
-        <div class="comment-title">热门评论</div>
-        <div class="user-comment">
-            <div class="comment-top">
-                <div class="user-name">遇见</div>
-                <div class="comment-time">2015-03-25 发表</div>
-            </div>
-            <div class="comment-detailed">多种团购服务集于一体，使用起来非常的方便。尤其是一些高频次的团购服务内容，像是美食、电影、KTV等，是很赞的一个团购商城。</div>
-        </div>
-        <div class="user-comment">
-            <div class="comment-top">
-                <div class="user-name">流连忘返</div>
-                <div class="comment-time">2015-03-25 发表</div>
-            </div>
-            <div class="comment-detailed">商城网站案例棒棒哒！</div>
-        </div>
-        <div class="user-comment">
-            <div class="comment-top">
-                <div class="user-name">流连忘返</div>
-                <div class="comment-time">2015-03-25 发表</div>
-            </div>
-            <div class="comment-detailed">商城网站案例棒棒哒！</div>
-        </div>
-        <div class="user-comment">
-            <div class="comment-top">
-                <div class="user-name">流连忘返</div>
-                <div class="comment-time">2015-03-25 发表</div>
-            </div>
-            <div class="comment-detailed">商城网站案例棒棒哒！</div>
-        </div>
+    <div class="comment-title" data-role="data-wrapper">热门评论</div>
 
-        <div id="i-want-comment">
-            <form>
-                <input type="text" name="comment" placeholder="请输入点评内容">
-            </form>
-        </div>
+            <div class="user-comment">
+    <div class="comment-top">
+        <div class="user-name">lin</div>
+        <div class="comment-time">2015-02-26 发表</div>
     </div>
+    <div class="comment-detailed">这个案例不错嘛</div>
+</div>
+<div class="user-comment">
+    <div class="comment-top">
+        <div class="user-name">嘟嘟</div>
+        <div class="comment-time">2014-12-10 发表</div>
+    </div>
+    <div class="comment-detailed">带啥儿商城app比较好用，功能比较齐全。</div>
+</div>
+        
+    <div id="i-want-comment">
+        <form>
+            <input type="text" name="comment" placeholder="请输入点评内容">
+        </form>
+    </div>
+</div>
 <div id="footer">
     <div id="telephone">
         <div id="tel-icon">
@@ -161,7 +147,7 @@
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
 <script src="http://localhost:8000/js/webapp.js"></script>
 
-    
+        
     <script type="text/javascript">
         $(function(){
             $('.yiz-slider-2').ScrollPic({
@@ -170,6 +156,14 @@
                 autoscrooll: true
             });
         })
+    </script>
+
+    <script type="text/javascript">
+        (function($) {
+            $.ajax({
+                url: 'http://localhost:8000/update-case-view-count/7'
+            })
+        })(jQuery)
     </script>
 
  </body>

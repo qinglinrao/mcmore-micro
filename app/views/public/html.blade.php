@@ -10,7 +10,7 @@
             <meta name="baidu-site-verification" content="SkuslauSHL" />
 			<meta name="360-site-verification" content="88730af8854662efd0aaec358a69eb4e" />
 			<meta name="sogou_site_verification" content="s4gnKp4B8O"/>
-            <meta name="viewport" content="" />
+            <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
              <title>@yield('title') </title>
              <meta name="keywords" content="@yield('keywords')"/>
               <meta name="description" content="@yield('description')"/>
@@ -18,7 +18,7 @@
             <link href="{{AppHelper::asset("/favicon.ico")}}" type="text/css" rel="stylesheet" />
 
                {{AppHelper::assets([
-                        'css/webapp.css','css/message.css'
+                        'css/webapp.css','css/message.css','css/loadmore.css'
                     ], '.css')}}
 
 
@@ -43,7 +43,7 @@
         'js/jquery.min.js',
     /*  'js/consult_form.js',*/
         'js/jquery.ScrollPic.js ',
-        'js/webapp.js',
+       /* 'js/webapp.js',*/
 /*         'js/sco/sco.message.js',
         'js/sco/sco.modal.js',
         'js/sco/sco.panes.js',

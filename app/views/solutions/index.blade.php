@@ -12,9 +12,8 @@
 
 
                         @include('public.partials.solution', array('solutions'=>$solutions))
-
-                    {{$solutions->links()}}
                 </ul>
+                {{$solutions->links()}}
             </div>
         </div>
 

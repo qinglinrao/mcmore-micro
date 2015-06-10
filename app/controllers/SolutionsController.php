@@ -44,9 +44,14 @@ class SolutionsController extends BaseController {
        $solutions =  $solutions = Article::categorys('fangan')->visible()->published()->get();
 
     	//评论
-    	$comments = Comment::where('resource_id','=',$id)->visible()->paginate(3);
+    	$comments = Comment::where('resource_id','=',$id)->visible()->paginate(2);
 
-    	
+        $tag = array();
+        foreach($article->tags as $article_tag)
+            $tag[] = $article_tag->id;
+        // 相关阅读推荐
+        $relates = Article::with('images')->relateList($tag, $id)->take(3)->get();
+
     	//加载更多评论
         //加载更多评论
         if (Request::wantsjson()) {
@@ -73,7 +78,7 @@ class SolutionsController extends BaseController {
     	Breadcrumbs::addCrumb("<b>{$article->name}</b>");
     	
     	return View::make('solutions.detail', compact(
-            'active_menu', 'article', 'prev', 'next', 'article_num', 'comments', 'comments_num','solutions','recommends'
+            'active_menu', 'article', 'prev', 'next', 'article_num', 'comments', 'comments_num','solutions','recommends','relates'
         ))->with('breadcrumb', Breadcrumbs::render());
     }
     

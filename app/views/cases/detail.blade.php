@@ -3,7 +3,16 @@
 @section('keywords'){{AppHelper::tdk('keywords',$case)}}@stop
 @section('description'){{AppHelper::tdk('description',$case)}}@stop
 
-
+@section('scripts')
+    @parent
+    <script type="text/javascript">
+        (function($) {
+            $.ajax({
+                url: '<?php echo URL::route("case.update", array("id" => $case->id)) ?>'
+            })
+        })(jQuery)
+    </script>
+@stop
 @section('content')
     <div id="case-detailed">
         <div id="case-detailed-img">
@@ -33,11 +42,17 @@
             <p><b>采用系统：</b>麦多多用户商城</p>
             <p><b>系统特色：{{ $case->feature }}</b></p>
         </div>
-        <div class="case-detailed-other">
+       {{-- <div class="case-detailed-other">
             <div class="case-detailed-time">{{Carbon::parse($case->updated_at)->format('Y-m-d H:i')}}</div>
-            <div class="case-detailed-comment">{{$case->view_count }}</div>
-            <div class="case-detailed-browse">{{$comments_num}}</div>
+            <div class="case-detailed-comment">{{$comments_num}}</div>
+            <div class="case-detailed-browse">{{$case->view_count }}</div>
+        </div>--}}
+        <div id="case-detailed-other">
+            <div id="case-detailed-time">{{Carbon::parse($case->updated_at)->format('Y-m-d H:i')}}</div>
+            <div id="case-detailed-comment">{{$comments_num}}</div>
+            <div id="case-detailed-browse">{{$case->view_count }}</div>
         </div>
+
     </div>
 
     <div class="last-next">

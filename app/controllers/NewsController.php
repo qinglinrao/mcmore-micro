@@ -30,8 +30,9 @@ class NewsController extends BaseController {
 
         $monthly_list   = Statistic::articleMonthlyList()->take(6)->get();
 
+        $type = 'news';
         return View::make('news.index', compact(
-            'active_menu', 'categories', 'recommends', 'hot_tags', 'weekly_list', 'monthly_list','code'
+            'active_menu', 'categories', 'recommends', 'hot_tags', 'weekly_list', 'monthly_list','code','type'
         ));
     }
 
@@ -83,8 +84,18 @@ class NewsController extends BaseController {
         ));
     }
 
-    public function getList($type)
+    public function getList($type='hynews')
     {
+
+        $categories = Category::whereIn('code', ['hynews', 'ydnews', 'yxnews', 'faq', 'ghnews'])->get();
+        foreach($categories as $key => $category)
+        {
+            $categories[$key]->articles = Article::with('category', 'img', 'comments', 'tags')
+                ->getList($category->code)
+                ->take(10)
+                ->get();
+        }
+
         $articles = Article::with('category', 'images', 'comments', 'tags')
             ->getList($type)
             ->paginate(15);
@@ -100,19 +111,18 @@ class NewsController extends BaseController {
 
         $recommends = Article::with('images')->recommendList($type)->take(6)->get();
 
-        $weekly = Article::weekly($type)->count();
+        /*$weekly = Article::weekly($type)->count();
 
         $weekly_list = Statistic::articleWeeklyList($type)->take(6)->get();
-        $monthly_list = Statistic::articleMonthlyList($type)->take(6)->get();
+        $monthly_list = Statistic::articleMonthlyList($type)->take(6)->get();*/
 
 
         $latest_news =Article::with('images')->recommendList($type)->take(6)->get();
 
 
         $hot_tags = Recommend::with('tag')->whereRecommendTypeCode('hot_tag')->get();
-
         return View::make('news.list', compact(
-            'category', 'articles', 'recommends', 'weekly', 'weekly_list', 'monthly_list','type','latest_news','hot_tags'
+            'category', 'articles', 'recommends', 'weekly', 'weekly_list', 'monthly_list','type','latest_news','hot_tags','type','categories'
         ));
     }
 
@@ -138,6 +148,7 @@ class NewsController extends BaseController {
         $previous = Article::previousData($type, $id);
         $next = Article::nextData($type, $id);
 
+
         $tag = array();
         foreach($article->tags as $article_tag)
             $tag[] = $article_tag->id;
@@ -156,9 +167,9 @@ class NewsController extends BaseController {
             $recommends = Article::with('images')->recommendList($type, $id)->rand()->take(6)->get();
 
 
-            $weekly_list    = Article::where('category_code',$type)->orderBy('view_count',desc)->visible()->take(6)->get();
+            /*$weekly_list    = Article::where('category_code',$type)->orderBy('view_count',desc)->visible()->take(6)->get();
 
-            $monthly_list = Statistic::articleMonthlyList($type)->take(6)->get();
+            $monthly_list = Statistic::articleMonthlyList($type)->take(6)->get();*/
         } else {
             $latest_faqs = Article::getList($type)->take(5)->get();
             $hot_faqs = Article::getList($type, 'hot')->take(5)->get();

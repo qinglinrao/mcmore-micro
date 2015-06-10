@@ -10,8 +10,8 @@
     </div>
     <div id="dynamics-other">
         <div id="dynamics-time">{{Carbon::parse($item->updated_at)->format('Y-m-d H:i')}}</div>
-        <div id="dynamics-comment">{{{ $item->view_count }}}</div>
-        <div id="dynamics-browse">{{{ $item->comments->count() }}}</div>
+        <div id="dynamics-comment">{{{ $item->comments->count() }}}</div>
+        <div id="dynamics-browse">{{{ $item->view_count }}}</div>
     </div>
 </div>
 @endforeach

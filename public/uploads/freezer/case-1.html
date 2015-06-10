@@ -10,7 +10,7 @@
             <meta name="baidu-site-verification" content="SkuslauSHL" />
 			<meta name="360-site-verification" content="88730af8854662efd0aaec358a69eb4e" />
 			<meta name="sogou_site_verification" content="s4gnKp4B8O"/>
-            <meta name="viewport" content="" />
+            <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
              <title>团购手机商城网站系统案例- </title>
              <meta name="keywords" content="团购案例"/>
               <meta name="description" content="团购商城是知名的中国团购网站，采用了麦多电商系统提供美食、KTV、电影票、酒店、婚纱摄影等团购服务。"/>
@@ -19,6 +19,7 @@
 
                <link media="all" type="text/css" rel="stylesheet" href="http://localhost:8000/css/webapp.css">
 <link media="all" type="text/css" rel="stylesheet" href="http://localhost:8000/css/message.css">
+<link media="all" type="text/css" rel="stylesheet" href="http://localhost:8000/css/loadmore.css">
 
 
 
@@ -92,10 +93,10 @@
             <p><b>采用系统：</b>麦多多用户商城</p>
             <p><b>系统特色：</b></p>
         </div>
-        <div class="case-detailed-other">
+        <div id="case-detailed-other">
             <div class="case-detailed-time">2015-01-19 14:15</div>
-            <div class="case-detailed-comment">577</div>
-            <div class="case-detailed-browse">12</div>
+            <div class="case-detailed-comment">12</div>
+            <div class="case-detailed-browse">610</div>
         </div>
     </div>
 
@@ -108,46 +109,22 @@
         </a>
     </div>
     <div class="cd-comment">
-    <div class="comment-title" data-role="data-wrapper">热门评论</div>
+    <div class="comment-title">热门评论</div>
 
-            <div class="user-comment">
+    <ul data-role="data-wrapper">
+                    <div class="user-comment">
     <div class="comment-top">
         <div class="user-name">12312312</div>
         <div class="comment-time">2015-02-13 发表</div>
     </div>
     <div class="comment-detailed">1231231231232</div>
 </div>
-<div class="user-comment">
-    <div class="comment-top">
-        <div class="user-name">12312</div>
-        <div class="comment-time">2015-02-06 发表</div>
-    </div>
-    <div class="comment-detailed">123123</div>
-</div>
-<div class="user-comment">
-    <div class="comment-top">
-        <div class="user-name">很关键</div>
-        <div class="comment-time">2014-12-10 发表</div>
-    </div>
-    <div class="comment-detailed">保健液网店系统的界面布局是非常合理的，尤其是结算界面，个人很是喜欢，看来麦多商城还挺有料的！</div>
-</div>
-<div class="user-comment">
-    <div class="comment-top">
-        <div class="user-name">半年</div>
-        <div class="comment-time">2014-12-10 发表</div>
-    </div>
-    <div class="comment-detailed">烘焙地球村商城使用的是Mcmore麦多O2O商城系统，烘焙地球村是目前国内领先的烘焙食品行业应用平台</div>
-</div>
-<div class="user-comment">
-    <div class="comment-top">
-        <div class="user-name">大夫山</div>
-        <div class="comment-time">2014-12-09 发表</div>
-    </div>
-    <div class="comment-detailed">板材易作为行业内比较出名的板材销售商城，自从跟麦多合作之后，明显感觉到商城网站的内部 明朗了很多。用户的体验得到了很好的提升。</div>
-</div>
-        <div class="loadmore load-more">
+        
+    </ul>
+    <div class="loadmore load-more">
     <a href="javascript:void(0)" class="loadmore-data more" data-page="1" rel="nofollow">点击加载更多</a>
 </div>
+
 
     <div id="i-want-comment">
         <form>
@@ -172,13 +149,12 @@
 </div></div>
 <script src="http://localhost:8000/js/jquery.min.js"></script>
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
-<script src="http://localhost:8000/js/webapp.js"></script>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
         (function($) {
             $(document).ready(function() {
 
-                var lastPage = 3;
+                var lastPage = 12;
                 var data_wrapper = $('[data-role="data-wrapper"]');
 
                 $('.loadmore').delegate('.loadmore-data', 'click', function() {
@@ -211,6 +187,14 @@
                         }
                     })
                 })
+            })
+        })(jQuery)
+    </script>
+
+    <script type="text/javascript">
+        (function($) {
+            $.ajax({
+                url: 'http://localhost:8000/update-case-view-count/1'
             })
         })(jQuery)
     </script>
