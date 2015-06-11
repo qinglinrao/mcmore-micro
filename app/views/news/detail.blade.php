@@ -19,20 +19,22 @@
             </div>
         </div>
 
-        <div id="dynamics-brief">
-            <div class="dynamics-brief-title">
-                {{{ $article->name }}}
+        <div id="editor">
+            <div id="dynamics-brief">
+                <div class="dynamics-brief-title">
+                    {{{ $article->name }}}
+                </div>
+                <div class="dynamics-brief-text"><b>摘要：</b>{{AppHelper::ellipse($article->brief,125)}}</div>
+                <div id="dynamics-brief-other">
+                    <div id="dynamics-brief-time">{{ Carbon::parse($article->updated_at)->format('Y-m-d H:i') }}</div>
+                    <div id="dynamics-brief-comment">{{$comments->count()}}</div>
+                    <div id="dynamics-brief-browse">{{ $article->view_count }}</div>
+                </div>
             </div>
-            <div class="dynamics-brief-text"><b>摘要：</b>{{AppHelper::ellipse($article->brief,125)}}</div>
-            <div id="dynamics-brief-other">
-                <div id="dynamics-brief-time">{{ Carbon::parse($article->updated_at)->format('Y-m-d H:i') }}</div>
-                <div id="dynamics-brief-comment">{{$comments->count()}}</div>
-                <div id="dynamics-brief-browse">{{ $article->view_count }}</div>
-            </div>
-        </div>
-        <div class="dynamics-details-detailed">
-            <div class="dynamics-detailed-text">
-                {{ $article->detail }}
+            <div class="dynamics-details-detailed">
+                <div class="dynamics-detailed-text">
+                    {{ $article->detail }}
+                </div>
             </div>
         </div>
 

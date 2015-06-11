@@ -37,7 +37,9 @@
         <div class="case-detailed-title">
             {{ $case->name }}
         </div>
-        <div class="case-detailed-text">{{ $case->detail }}</div>
+        <div id="editor">
+            <div class="case-detailed-text">{{ $case->detail }}</div>
+        </div>
         <div class="case-detailed-sys">
             <p><b>采用系统：</b>麦多多用户商城</p>
             <p><b>系统特色：{{ $case->feature }}</b></p>

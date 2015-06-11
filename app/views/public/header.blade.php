@@ -8,5 +8,18 @@
             <p>我要试用</p>
         </a>
     </div>
-    <div id="page-title"><a href="/"><img id="logo" src="/img/icon/logo.png"></a></div>
+
+        @if(Request::is('service/*'))
+        <div class="navigation"><a href="{{URL::route('service')}}">电商服务</a></div>
+        @elseif(Request::is('*shop'))
+        <div class="navigation"><a href="{{URL::route('service')}}">定制服务</a></div>
+        @elseif(Request::is('case-*'))
+        <div class="navigation"><a href="{{URL::route('case')}}">成功案例</a></div>
+        @elseif(Request::is('fangan-*'))
+        <div class="navigation"><a href="{{URL::route('fangan')}}">解决方案</a></div>
+
+        @else
+        <div id="page-title"><a href="/"><img id="logo" src="/img/icon/logo.png"></a></div>
+        @endif
+
 </div>

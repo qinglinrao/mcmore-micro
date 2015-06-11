@@ -14,7 +14,49 @@ a:link, a:visited {
     display: inline-block;
     width: 100%;
     text-align: center;
-    height: 30px;
-    line-height: 30px;
+    height: 2rem;
+    line-height: 2rem;
     background-color: #ebebeb;
+    font-size: 1.2rem;
 }
+
+
+/* 顶部导航 */
+.navigation{
+    font-size:1.5rem;
+    text-align: center;
+}
+.navigation p{
+    margin-top:1.5rem;
+
+}
+
+/* 编辑框样式 */
+#editor h1{
+    font-size: 24px
+}
+#editor h2{
+    font-size: 20px
+}
+#editor h3{
+    font-size: 18px
+}
+#editor h4{
+    font-size: 16px
+}
+#editor h5{
+    font-size: 16px
+}
+
+#editor p{
+    margin: 1em 0;
+    text-indent: 2em;
+    font-size: 0.6rem;
+}
+#editor u{
+    text-decoration: underline;
+}
+#editor i{
+    font-style: italic;
+}
+

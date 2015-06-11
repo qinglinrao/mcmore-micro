@@ -26,18 +26,21 @@
 
 <body>
 <div id="main">
-@include('public.header')
+    @include('public.left_menu')
+    <div class="mainContent">
+    @include('public.header')
 
-@if(Request::is('/') || Request::is('function*') || Request::is('service') || Request::is('case*'))
-    @include('public.menu1')
-@endif
+    @if(Request::is('/') || Request::is('function*') || Request::is('service') || Request::is('case*'))
+        @include('public.menu1')
+    @endif
 
-@if(Request::is('ydds*'))
-    @include('public.menu2')
-@endif
+    @if(Request::is('ydds*'))
+        @include('public.menu2')
+    @endif
 
-@yield('content')
-@include('public.footer')
+    @yield('content')
+    @include('public.footer')
+    </div>
 </div>
 {{AppHelper::assets([
         'js/jquery.min.js',
@@ -48,6 +51,7 @@
         'js/sco/sco.modal.js',
         'js/sco/sco.panes.js',
         'js/sco/sco.tab.js',*/
+        'js/leftmenu.js'
    ], '.js')}}
 @yield('scripts')
 

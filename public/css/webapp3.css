@@ -174,60 +174,68 @@ body {
     min-height: 100%;
     overflow: hidden;
     position: absolute;
+    width: 60%;
+    z-index: -1;
+}
+#menu-bar-wrapper {
+    background-color: #33373a;
+    min-height: 100%;
+    overflow: hidden;
+    position: absolute;
     width: 75%;
     z-index: 0;
 }
 #menu-bar-wrapper:after{
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 100%;
-	top: 0;
-	right: 0;
-	box-shadow: -1px 0 7px 1px #1e1e1f;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    box-shadow: -1px 0 7px 1px #1e1e1f;
 }
 
 /*start add jun 2015-06-11*/
 #menu-bar-wrapper .logo img{
-	display: block;
-	margin: 2em auto;
-	width: 25%;
+    display: block;
+    margin: 2em auto;
+    width: 25%;
 }
 .left-menu{font-size: 0.9rem;}
 .left-menu li{
-	border-bottom: 1px #474d51 solid;
-	padding: 1.4em 1.8em;
+    border-bottom: 1px #474d51 solid;
+    padding: 1.4em 1.8em;
 }
 .left-menu li.active{
-	background-color: #212427;
-	position: relative;
+    background-color: #212427;
+    position: relative;
 }
 .left-menu li.active:before{
-	content: "";
-	display: inline-block;
-	vertical-align: middle;
-	border: 0.6em transparent solid;
-	border-left: 0.6em #e23b42 solid;
-	position: absolute;
-	left: 0;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    border: 0.6em transparent solid;
+    border-left: 0.6em #e23b42 solid;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .left-menu a{
-	color: #b7b7b7;
+    color: #b7b7b7;
 }
 .left-menu .ico{
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-position: center center;
-	width: 1.5em;
-	height: 1.5em;
-	background-size: contain;
-	margin-right: 0.8em;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 1.5em;
+    height: 1.5em;
+    background-size: contain;
+    margin-right: 0.8em;
 }
 .left-menu span{
-	vertical-align: middle;
+    vertical-align: middle;
 }
 .left-menu li.active span{color: #fff;}
 .left-menu li .shouye{background-image: url(../img/icon/menu-shouye.png);}
@@ -250,32 +258,12 @@ body {
 
 
 #main {
-	overflow: hidden;
 	margin: 0 auto;
 	min-width: 320px;
 	max-width: 640px;
 	height: auto;
 	background: #f1f1f1;
-	/*start add jun 2015-06-11*/
-	position: relative;
-	/*end add jun 2015-06-11*/
 }
-
-/*start add jun 2015-06-11*/
-.mainContent{
-	background-color: #f1f1f1;
-	position: relative;
-	z-index: 2;
-	-webkit-transition: all .4s ease;
-	transition: all .4s ease;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-.mainContent.opened{
-	-webkit-transform: translate3d(75%,0,0);
-	transform: translate3d(75%,0,0);
-}
-/*end add jun 2015-06-11*/
 
 
 #header {
