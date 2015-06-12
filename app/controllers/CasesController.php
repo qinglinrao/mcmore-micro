@@ -45,7 +45,7 @@ class CasesController extends BaseController {
         }
         
        
-        $comments = $case->comments()->visible()->paginate(1);
+        $comments = $case->comments()->visible()->paginate(3);
 
         //加载更多评论 
         if (Request::wantsjson()) {

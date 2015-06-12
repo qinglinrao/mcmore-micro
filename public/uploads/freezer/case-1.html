@@ -27,7 +27,62 @@
 
 <body>
 <div id="main">
-<div id="header">
+    <div id="menu-bar-wrapper">
+    <div class="logo">
+        <a href="/"><img src="img/logo.png" alt=""></a>
+    </div>
+    <ul class="left-menu top list-unstyle">
+        <li class="">
+            <a class="ui-link" href="/">
+                <span class="ico shouye"></span>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/ydds">
+                <span class="ico chanpin"></span>
+                <span>麦多产品</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/fangan">
+                <span class="ico fangan"></span>
+                <span>解决方案</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/moban">
+                <span class="ico moban"></span>
+                <span>商城模板</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/service">
+                <span class="ico fuwu"></span>
+                <span>电商服务</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/news">
+                <span class="ico zixun"></span>
+                <span>电商资讯</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/contact">
+                <span class="ico lianxi"></span>
+                <span>联系我们</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/dj">
+                <span class="ico shiyong"></span>
+                <span>我要试用</span>
+            </a>
+        </li>
+    </ul>
+</div>    <div class="mainContent">
+    <div id="header">
     <a class="menu-1" class="ui-link" href="#">
         <img id="menu-button" src="/img/icon/menu.png">
     </a>
@@ -41,7 +96,7 @@
                 <div class="navigation"><a href="http://localhost:8000/case">成功案例</a></div>
         
 </div>
-    <div class="menu-1" class="clearfix">
+            <div class="menu-1" class="clearfix">
     <ul class="list-unstyle">
         <li>
             <a class=" ui-link" href="/">麦多优势</a>
@@ -56,9 +111,9 @@
             <a class="active ui-link" href="http://localhost:8000/case">成功案例</a>
         </li>
     </ul>
-</div>
-
-    <div id="case-detailed">
+</div>    
+    
+        <div id="case-detailed">
         <div id="case-detailed-img">
             <a id="back-arrow" href="#">
                 <img id="back-arrow-icon" src="/img/icon/left-arrow.png">
@@ -100,7 +155,7 @@
                <div id="case-detailed-other">
             <div id="case-detailed-time">2015-01-19 14:15</div>
             <div id="case-detailed-comment">12</div>
-            <div id="case-detailed-browse">613</div>
+            <div id="case-detailed-browse">625</div>
         </div>
 
     </div>
@@ -114,7 +169,7 @@
         </a>
     </div>
     <div class="cd-comment">
-    <div class="comment-title">热门评论</div>
+    <div class="comment-title">热门评论(12)</div>
 
     <ul data-role="data-wrapper">
                     <div class="user-comment">
@@ -123,6 +178,20 @@
         <div class="comment-time">2015-02-13 发表</div>
     </div>
     <div class="comment-detailed">1231231231232</div>
+</div>
+<div class="user-comment">
+    <div class="comment-top">
+        <div class="user-name">12312</div>
+        <div class="comment-time">2015-02-06 发表</div>
+    </div>
+    <div class="comment-detailed">123123</div>
+</div>
+<div class="user-comment">
+    <div class="comment-top">
+        <div class="user-name">很关键</div>
+        <div class="comment-time">2014-12-10 发表</div>
+    </div>
+    <div class="comment-detailed">保健液网店系统的界面布局是非常合理的，尤其是结算界面，个人很是喜欢，看来麦多商城还挺有料的！</div>
 </div>
         
     </ul>
@@ -137,29 +206,34 @@
         </form>
     </div>
 </div>
-<div id="footer">
+    <div id="footer">
     <div id="telephone">
         <div id="tel-icon">
             <img src="/img/icon/tel.png" width="auto" height="100%">
         </div>
-        <div id="tel-number">4008-388-381</div>
+        <div id="tel-number"><a href="tel:4008-388-381">4008-388-381</a></div>
     </div>
     <div id="wechat">
         <div id="wechat-icon">
             <img src="/img/icon/wechat.png" width="auto" height="100%">
         </div>
-        <div id="wechat-number">mcmore888</div>
+        <div id="wechat-number"><a href="weixin://contacts/profile/mcmore888">mcmore888</a></div>
+
     </div>
 
-</div></div>
+</div>
+
+    </div>
+</div>
 <script src="http://localhost:8000/js/jquery.min.js"></script>
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
+<script src="http://localhost:8000/js/leftmenu.js"></script>
 
         <script type="text/javascript">
         (function($) {
             $(document).ready(function() {
 
-                var lastPage = 12;
+                var lastPage = 4;
                 var data_wrapper = $('[data-role="data-wrapper"]');
 
                 $('.loadmore').delegate('.loadmore-data', 'click', function() {

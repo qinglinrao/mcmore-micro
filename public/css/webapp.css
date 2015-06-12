@@ -931,7 +931,7 @@ body {
 	background-color: #fff;
 	border-top: solid 1px #c6c4c5;
 	border-bottom: solid 1px #c6c4c5;
-	position: absolute;
+	/*position: absolute;*/
 	bottom: -2.5rem;
 }
 #i-want-comment input {

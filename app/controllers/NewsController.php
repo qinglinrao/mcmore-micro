@@ -129,7 +129,7 @@ class NewsController extends BaseController {
     public function getDetail($id)
     {
         $comments = Comment::getList($id)->paginate(3);
-
+        $comment_count = Comment::getList($id)->count();
 
         // 加载更多
         if(Request::ajax()) {
@@ -189,7 +189,7 @@ class NewsController extends BaseController {
         return View::make('news.detail', compact(
             'type', 'comments', 'article', 'previous', 'next', 'relates',
             'latests','recommends', 'weekly_list', 'monthly_list',
-            'latest_faqs', 'hot_faqs','solutions','rand_faqs','faq_articles','latest_news'
+            'latest_faqs', 'hot_faqs','solutions','rand_faqs','faq_articles','latest_news','comment_count'
         ));
     }
 
@@ -201,8 +201,8 @@ class NewsController extends BaseController {
             App::abort(404);
         }
 
-        $comments = Comment::getList($id)->paginate(2);
-
+        $comments = Comment::getList($id)->paginate(3);
+        $comment_count = Comment::getList($id)->count();
 
         // 加载更多
         if(Request::ajax()) {
@@ -252,7 +252,7 @@ class NewsController extends BaseController {
         return View::make('news.detail', compact(
             'type', 'comments', 'article', 'previous', 'next', 'relates',
             'latests','recommends', 'weekly_list', 'monthly_list',
-            'latest_faqs', 'hot_faqs','solutions','rand_faqs','faq_articles','latest_news'
+            'latest_faqs', 'hot_faqs','solutions','rand_faqs','faq_articles','latest_news','comment_count'
         ));
     }
 

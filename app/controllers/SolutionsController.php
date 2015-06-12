@@ -44,7 +44,8 @@ class SolutionsController extends BaseController {
        $solutions =  $solutions = Article::categorys('fangan')->visible()->published()->get();
 
     	//评论
-    	$comments = Comment::where('resource_id','=',$id)->visible()->paginate(2);
+    	$comments = Comment::where('resource_id','=',$id)->visible()->paginate(3);
+    	$comment_count = Comment::where('resource_id','=',$id)->visible()->count();
 
         $tag = array();
         foreach($article->tags as $article_tag)
@@ -78,7 +79,7 @@ class SolutionsController extends BaseController {
     	Breadcrumbs::addCrumb("<b>{$article->name}</b>");
     	
     	return View::make('solutions.detail', compact(
-            'active_menu', 'article', 'prev', 'next', 'article_num', 'comments', 'comments_num','solutions','recommends','relates'
+            'active_menu', 'article', 'prev', 'next', 'article_num', 'comments', 'comments_num','solutions','recommends','relates','comment_count'
         ))->with('breadcrumb', Breadcrumbs::render());
     }
     

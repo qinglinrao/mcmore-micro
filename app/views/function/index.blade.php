@@ -9,7 +9,7 @@
     <div id="main-content">
         <h2 class="content-title">系统功能</h2>
         <div id="split-line"><img src="/img/icon/func-under-line.png"></div>
-        <div class="content-intro">丰富的功能不断新增迭代，麦多移动电商系统，是您电商触电 的首选商城系统。</div>
+        <div class="content-intro">丰富的功能不断新增迭代，麦多移动电商系统，是您电商触电的首选商城系统。</div>
 
         <div class="section">
             <ul id="func-list">

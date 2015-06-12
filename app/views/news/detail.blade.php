@@ -4,10 +4,9 @@
 @section('keywords'){{Seo::get('keywords')}}@stop
 @section('description'){{Seo::get('description')}}@stop
 @section('content')
-    <div id="main">
         <div id="dynamics-detailed-header">
             <div class="ddh-back-arrow">
-                <a href="">
+                <a href="javascript:history.go(-1)">
                     <img src="/img/icon/left-arrow.png">
                 </a>
             </div>
@@ -27,7 +26,7 @@
                 <div class="dynamics-brief-text"><b>摘要：</b>{{AppHelper::ellipse($article->brief,125)}}</div>
                 <div id="dynamics-brief-other">
                     <div id="dynamics-brief-time">{{ Carbon::parse($article->updated_at)->format('Y-m-d H:i') }}</div>
-                    <div id="dynamics-brief-comment">{{$comments->count()}}</div>
+                    <div id="dynamics-brief-comment">{{$comment_count}}</div>
                     <div id="dynamics-brief-browse">{{ $article->view_count }}</div>
                 </div>
             </div>
@@ -51,9 +50,9 @@
 
         @include('news.partials.relate', ['items'=>$relates])
 
-        @include('solutions.comments');
+        @include('solutions.comments')
 
-    </div>
+
 
 
 @stop

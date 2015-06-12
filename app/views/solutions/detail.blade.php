@@ -14,7 +14,7 @@
 @section('content')
     <div id="solution-detailed-header">
         <div class="sdh-back-arrow">
-            <a href="">
+            <a href="javascript:history.go(-1)">
                 <img src="./img/icon/left-arrow.png">
             </a>
         </div>
@@ -33,7 +33,7 @@
             <div class="solution-brief-text"><b>摘要：</b>{{AppHelper::ellipse($article->brief,100,'')}}</div>
             <div id="solution-brief-other">
                 <div id="solution-brief-time">{{ date("Y-m-d H:i:s",strtotime($article->created_at)) }}</div>
-                <div id="solution-brief-comment">{{ $article_num }}</div>
+                <div id="solution-brief-comment">{{ $comment_count }}</div>
                 <div id="solution-brief-browse">{{$article->view_count}}</div>
             </div>
         </div>
@@ -80,5 +80,5 @@
     </div>--}}
     @include('news.partials.relate', ['items'=>$relates])
 
-    @include('solutions.comments');
+    @include('solutions.comments')
 @stop

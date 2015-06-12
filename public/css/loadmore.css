@@ -60,3 +60,11 @@ a:link, a:visited {
     font-style: italic;
 }
 
+/*底部的电话号码样式*/
+#tel-number a{
+    color: #d2d2d2;
+}
+
+.menu-2 li{
+    font-size: 0.6rem;
+}

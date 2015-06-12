@@ -1,6 +1,6 @@
 <div class="cd-comment">
     <div class="comment-title">
-        全部评论
+        全部评论({{$comment_count}})
         <span></span>
     </div>
     <div id="comment-list">

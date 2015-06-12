@@ -1,5 +1,5 @@
 <div class="cd-comment">
-    <div class="comment-title">热门评论</div>
+    <div class="comment-title">热门评论({{{$comments_num}}})</div>
 
     <ul data-role="data-wrapper">
         @if($comments->count())
