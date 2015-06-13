@@ -80,5 +80,5 @@
     </div>--}}
     @include('news.partials.relate', ['items'=>$relates])
 
-    @include('solutions.comments')
+    @include('solutions.comments',$article->id)
 @stop

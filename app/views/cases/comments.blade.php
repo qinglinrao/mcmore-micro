@@ -11,7 +11,7 @@
 
     <div id="i-want-comment">
         <form>
-            <input type="text" name="comment" placeholder="请输入点评内容">
+            <input type="text" name="comment" placeholder="请输入点评内容2">
         </form>
     </div>
 </div>

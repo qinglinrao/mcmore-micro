@@ -27,7 +27,62 @@
 
 <body>
 <div id="main">
-<div id="header">
+    <div id="menu-bar-wrapper">
+    <div class="logo">
+        <a href="/"><img src="img/logo.png" alt=""></a>
+    </div>
+    <ul class="left-menu top list-unstyle">
+        <li class="">
+            <a class="ui-link" href="/">
+                <span class="ico shouye"></span>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/ydds">
+                <span class="ico chanpin"></span>
+                <span>麦多产品</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/fangan">
+                <span class="ico fangan"></span>
+                <span>解决方案</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/moban">
+                <span class="ico moban"></span>
+                <span>商城模板</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/service">
+                <span class="ico fuwu"></span>
+                <span>电商服务</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/news">
+                <span class="ico zixun"></span>
+                <span>电商资讯</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/contact">
+                <span class="ico lianxi"></span>
+                <span>联系我们</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/dj">
+                <span class="ico shiyong"></span>
+                <span>我要试用</span>
+            </a>
+        </li>
+    </ul>
+</div>    <div class="mainContent">
+    <div id="header">
     <a class="menu-1" class="ui-link" href="#">
         <img id="menu-button" src="/img/icon/menu.png">
     </a>
@@ -38,10 +93,12 @@
         </a>
     </div>
 
-                <div class="navigation"><a href="http://localhost:8000/case">成功案例</a></div>
-        
+               <div id="page-title"><a href="/"><img id="logo" src="/img/icon/logo.png"></a></div>
+       
 </div>
-    <div class="menu-1" class="clearfix">
+        <div class="close">
+
+                            <div class="menu-1" class="clearfix">
     <ul class="list-unstyle">
         <li>
             <a class=" ui-link" href="/">麦多优势</a>
@@ -56,9 +113,9 @@
             <a class="active ui-link" href="http://localhost:8000/case">成功案例</a>
         </li>
     </ul>
-</div>
-
-    <div id="case-detailed">
+</div>            
+            
+                <div id="case-detailed">
         <div id="case-detailed-img">
             <a id="back-arrow" href="#">
                 <img id="back-arrow-icon" src="/img/icon/left-arrow.png">
@@ -86,8 +143,10 @@
         <div class="case-detailed-title">
             倍护儿母婴APP商城案例
         </div>
-        <div class="case-detailed-text"><p><span style="font-size:18px">母婴用品<a href="http://www.mcmore.cn/">网上商城</a>，是集购物、支付、配送为一体的购物商城。温馨时尚的界面设计、便捷高效的购物模式，使用户可以更加轻松的购置自己需要的母婴产品。</span></p>
+        <div id="editor">
+            <div class="case-detailed-text"><p><span style="font-size:18px">母婴用品<a href="http://www.mcmore.cn/">网上商城</a>，是集购物、支付、配送为一体的购物商城。温馨时尚的界面设计、便捷高效的购物模式，使用户可以更加轻松的购置自己需要的母婴产品。</span></p>
 </div>
+        </div>
         <div class="case-detailed-sys">
             <p><b>采用系统：</b>麦多多用户商城</p>
             <p><b>系统特色：</b></p>
@@ -95,7 +154,7 @@
                <div id="case-detailed-other">
             <div id="case-detailed-time">2015-01-19 14:15</div>
             <div id="case-detailed-comment">0</div>
-            <div id="case-detailed-browse">361</div>
+            <div id="case-detailed-browse">362</div>
         </div>
 
     </div>
@@ -109,7 +168,7 @@
         </a>
     </div>
     <div class="cd-comment">
-    <div class="comment-title">热门评论</div>
+    <div class="comment-title">热门评论(0)</div>
 
     <ul data-role="data-wrapper">
         
@@ -122,23 +181,29 @@
         </form>
     </div>
 </div>
-<div id="footer">
+            <div id="footer">
     <div id="telephone">
         <div id="tel-icon">
             <img src="/img/icon/tel.png" width="auto" height="100%">
         </div>
-        <div id="tel-number">4008-388-381</div>
+        <div id="tel-number"><a href="tel:4008-388-381">4008-388-381</a></div>
     </div>
     <div id="wechat">
         <div id="wechat-icon">
             <img src="/img/icon/wechat.png" width="auto" height="100%">
         </div>
-        <div id="wechat-number">mcmore888</div>
+        <div id="wechat-number"><a href="weixin://contacts/profile/mcmore888">mcmore888</a></div>
+
     </div>
 
-</div></div>
+</div>
+
+        </div>
+    </div>
+</div>
 <script src="http://localhost:8000/js/jquery.min.js"></script>
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
+<script src="http://localhost:8000/js/leftmenu.js"></script>
 
         
     <script type="text/javascript">

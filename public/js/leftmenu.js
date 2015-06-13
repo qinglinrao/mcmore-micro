@@ -7,18 +7,34 @@
 'use strict';
 $(function(){
 	function openLeftMenu() {
-        $('#menu-button').toggleClass('opened')
+        $('#menu-bar-wrapper').show();
+        $('#menu-button').toggleClass('opened');
+        $('#menu-bar-wrapper').toggleClass('opened');
         $(".mainContent").addClass('opened');
     }
     function closeLeftMenu() {
         $('#menu-button').toggleClass('opened');
+        $('#menu-bar-wrapper').toggleClass('opened');
         $(".mainContent").removeClass('opened');
+        setTimeout(function(){
+            $('#menu-bar-wrapper').hide();
+        },1000);
+
+
     }
     $('#menu-button').on("click", function() {
         if (!$(this).hasClass('opened')) {
             openLeftMenu()
         } else {
             closeLeftMenu()
+
+        }
+    });
+
+
+    $(".close").click( function () {
+        if($("#menu-bar-wrapper").hasClass('opened')){
+            closeLeftMenu();
         }
     });
 })

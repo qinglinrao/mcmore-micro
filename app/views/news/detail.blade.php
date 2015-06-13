@@ -10,7 +10,7 @@
                     <img src="/img/icon/left-arrow.png">
                 </a>
             </div>
-            <div class="ddh-title"><p>{{{ $article->name }}}</p></div>
+            <div class="ddh-title"><p>{{AppHelper::ellipse($article->name,15)}}</p></div>
             <div class="ddh-share">
                 <a href="">
                     <img src="/img/icon/share.png">

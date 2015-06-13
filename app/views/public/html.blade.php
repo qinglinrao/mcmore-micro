@@ -30,22 +30,26 @@
     <div class="mainContent">
     @include('public.header')
 
-    @if(Request::is('/') || Request::is('function*') || Request::is('service') || Request::is('case*'))
-        @include('public.menu1')
-    @endif
+        <div class="close">
 
-    @if(Request::is('ydds*'))
-        @include('public.menu2')
-    @endif
+            @if(Request::is('/') || Request::is('function*') || Request::is('service') || Request::is('case*'))
+                @include('public.menu1')
+            @endif
 
-    @yield('content')
-    @include('public.footer')
+            @if(Request::is('ydds*'))
+                @include('public.menu2')
+            @endif
+
+            @yield('content')
+            @include('public.footer')
+        </div>
     </div>
 </div>
 {{AppHelper::assets([
         'js/jquery.min.js',
     /*  'js/consult_form.js',*/
         'js/jquery.ScrollPic.js ',
+        'js/footer.js',
        /* 'js/webapp.js',*/
 /*         'js/sco/sco.message.js',
         'js/sco/sco.modal.js',

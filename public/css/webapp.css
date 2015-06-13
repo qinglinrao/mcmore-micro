@@ -672,7 +672,7 @@ body {
 /*--Case--*/
 .case-box {
 	width: 9rem;
-	height: 14.5rem;
+	height: 15.5rem;
 	margin-top: 0.6rem;
 	background-color: #fff;
 	border:solid 1px #c9c9c9;
@@ -934,7 +934,7 @@ body {
 	/*position: absolute;*/
 	bottom: -2.5rem;
 }
-#i-want-comment input {
+/*#i-want-comment input {
 	width: 94%;
 	height: 1.9rem;
 	margin-left: 3%;
@@ -945,7 +945,7 @@ body {
 	-webkit-background-size: 0.75rem 0.8rem;
 	 background-size: 0.75rem 0.8rem;
 	 font-size: 0.75rem; 
-}
+}*/
 /*--Quick Builk--*/
 .cd-s1 {
 	width: 100%;

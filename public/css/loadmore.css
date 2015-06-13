@@ -61,10 +61,91 @@ a:link, a:visited {
 }
 
 /*底部的电话号码样式*/
-#tel-number a{
+#tel-number a,#wechat-number a{
     color: #d2d2d2;
 }
 
 .menu-2 li{
     font-size: 0.6rem;
+}
+
+/*先把左边栏隐藏掉*/
+#menu-bar-wrapper{display:none;}
+
+/*分享和返回图标变下一点*/
+.ddh-back-arrow a img{
+    height: 1.5rem;
+}
+.ddh-share a img{
+    height: 1.4rem;
+}
+
+/*发表评论样式*/
+/*
+.comment-column{
+    margin-left:3%;
+}
+.comment-column-left{
+    float: left;
+    margin-left:3%;
+}
+
+.comment-column-right{
+    float: right;
+    margin-right:3%;
+}
+
+.comment-column-middle{
+    width:20%;
+    margin-left:auto;
+    margin-right: auto;
+}*/
+
+
+/*底部二维码*/
+#footer-code{z-index: 999;}
+#footer-code img{
+    display:none;
+    float:right;
+    width:7rem;
+    height:7rem;
+     margin:-8rem 2rem 1.0rem 0.9rem;
+    position: relative;
+
+}
+
+/*评论框*/
+#i-want-comment{height: 6rem;}
+
+#i-want-comment .comment-detail,#i-want-comment .comment-name {
+     width: 94%;
+     height: 1.9rem;
+     margin-left: 3%;
+     margin-top: 0.3rem;
+     padding-left: 1.3rem;
+     border: solid 1px #c6c4c5;
+     background: url(../img/icon/write.png) 0.3rem no-repeat;
+     -webkit-background-size: 0.75rem 0.8rem;
+     background-size: 0.75rem 0.8rem;
+     font-size: 0.75rem;
+ }
+#i-want-comment .comment-name {
+    background: url(../img/icon/icon-name.png) 0.3rem no-repeat;
+}
+
+#i-want-comment .comment-submit {
+    float:right;
+    margin-right: 3%;
+    margin-top: 0.2rem;
+    font-size: 1rem;
+}
+
+.comment-captcha{
+    margin-top: 0.2rem;
+    margin-left: 3%;
+    font-size: 0.7rem;
+}
+
+#captcha-img{
+    height: 1.2rem;
 }

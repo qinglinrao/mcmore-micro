@@ -317,7 +317,8 @@ class NewsController extends BaseController {
         $v = Validator::make(Input::all(), $rules, $message);
 
         if ($v->fails()) {
-            return Redirect::route('news.comment', array('id' => $id))->withErrors($v)->withInput();
+            /*return Redirect::route('news.comment', array('id' => $id))->withErrors($v)->withInput();*/
+            return Redirect::back()->withErrors($v)->withInput();
         }
 
         $comment = new Comment();
@@ -328,11 +329,11 @@ class NewsController extends BaseController {
         $comment->detail = Input::get('detail');
 
         if ($comment->save()) {
-            return Redirect::route('news.comment', array('id' => $id))->withErrors(array('info' => '评论成功，需要后台审核。'));
+            return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));
         } else {
-            return Redirect::route('news.comment', array('id' => $id))->withErrors(array('error' => '系统错误，评论失败'))->withInput();
+            return Redirect::back()->withErrors(array('error' => '系统错误，评论失败'))->withInput();
         }
 
-        return View::make('news.comment_form');
+        return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));
     }
 }
