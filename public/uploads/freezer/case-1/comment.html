@@ -20,7 +20,7 @@
                     <div class="post-comment">
                         <div class="post-comment-wrap">
                             <div class="comment-form" >
-                                <form method="POST" action="http://localhost:8000/case-1/comment" accept-charset="UTF-8" id="comment-form"><input name="_token" type="hidden" value="mRtbD1ilLgSVgP1URVWCXIpFRMzbHv6g66OEXwFd">
+                                <form method="POST" action="http://localhost:8000/case-1/comment" accept-charset="UTF-8" id="comment-form"><input name="_token" type="hidden" value="9xyt7aOZRIpegkRnN52YTVcZ2LMLagtytab1VIQz">
                                 <P>
                                     <span>
                                         网友：
@@ -35,7 +35,7 @@
                                     </span>
                                     <input class="captch-con" name="captcha" type="text" value="">
                                     <span class="captch-img">
-                                        <img id="captcha-img" src="http://localhost:8000/captcha?289693" class="" onclick="refresh_captcha()"/><script type="text/javascript">function refresh_captcha(){jQuery("#captcha-img").attr("src","/captcha?"+Math.ceil(Math.random()*100000))}</script>
+                                        <img id="captcha-img" src="http://localhost:8000/captcha?241467" class="" onclick="refresh_captcha()"/><script type="text/javascript">function refresh_captcha(){jQuery("#captcha-img").attr("src","/captcha?"+Math.ceil(Math.random()*100000))}</script>
                                     </span>
                                     <b class="comment-limit">
                                         剩余
@@ -72,5 +72,10 @@
                 $(window.parent.document).find('#comment-frame').height(250).width(840);
             })(jQuery)
         </script>
-            </body>
+        <script type="text/javascript">
+    (function($) {
+        window.parent.$.scojs_message('<ul><li><i>评论成功，需要后台审核。</i></li></ul>', $.scojs_message.TYPE_OK);
+    })(jQuery)
+</script>
+    </body>
 </html>

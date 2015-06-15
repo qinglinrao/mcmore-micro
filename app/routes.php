@@ -40,7 +40,7 @@ Route::group(array('before' => 'seorules.before'), function() {
     Route::get('update-case-view-count/{id}', array('as' => 'case.update', 'uses' => 'CasesController@getUpdateViewCount'));
 
     //资讯
-    Route::get('news', array('as' => 'news', 'uses' => 'NewsController@getList'));
+    Route::get('news', array('as' => 'news', 'uses' => 'NewsController@getIndex'));
     Route::get('tag-{id}', ['as' => 'news.tag', 'uses' => 'NewsController@getTag']);
     Route::get('{type}', ['as' => 'news.list', 'uses' => 'NewsController@getList'])->where('type','(hynews|ydnews|yxnews|faq|ghnews)');
 

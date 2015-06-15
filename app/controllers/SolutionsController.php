@@ -31,10 +31,7 @@ class SolutionsController extends BaseController {
     }
     
     public function getDetail($id){
-    	
-        
-
-		/*详情页*/
+        /*详情页*/
 //    	$article = Article::with('statistic')->detailData('fangan', $id);
         $article = Article::where('category_code','=','fangan')->find($id);
 
@@ -77,7 +74,7 @@ class SolutionsController extends BaseController {
     	//面包屑数据
     	Breadcrumbs::addCrumb($category->name, URL::route('news.list', array('code' => $article->category_code)));
     	Breadcrumbs::addCrumb("<b>{$article->name}</b>");
-    	
+
     	return View::make('solutions.detail', compact(
             'active_menu', 'article', 'prev', 'next', 'article_num', 'comments', 'comments_num','solutions','recommends','relates','comment_count'
         ))->with('breadcrumb', Breadcrumbs::render());

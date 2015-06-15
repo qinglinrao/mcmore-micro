@@ -20,10 +20,10 @@
             <li class="comment-column-right">发表</li>
         </ul>--}}
 
-        {{ Form::open(['url'=>URL::route('news.comment', ['id'=>$article->id]), 'id'=>'comment-form']) }}
+        {{ Form::open(['url'=>URL::route('news.comment', ['id'=>$article->id]), 'id'=>'comment-form1']) }}
             <input type="text" class='comment-name' name="name" placeholder="请输入昵称">
             <input type="text" class='comment-detail' name="detail" placeholder="请输入点评内容1">
-            <input type="submit" class='comment-submit'name="message-submit" value="发表">
+            <input type="submit" class='comment-submit' value="发表">
             <div class="comment-captcha">
                 <span class="tag">
                     验证码：
@@ -38,3 +38,12 @@
         {{ Form::close() }}
     </div>
 </div>
+
+@section('scripts')
+    @parent
+    {{HTML::script('js/comment.js')}}
+    {{HTML::script('js/sco/sco.message.js')}}
+    {{HTML::script('js/sco/sco.modal.js')}}
+    {{HTML::script('js/sco/sco.panes.js')}}
+    {{HTML::script('js/sco/sco.tab.js')}}
+@stop

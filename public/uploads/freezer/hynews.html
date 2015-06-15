@@ -27,7 +27,62 @@
 
 <body>
 <div id="main">
-<div id="header">
+    <div id="menu-bar-wrapper">
+    <div class="logo">
+        <a href="/"><img src="img/logo.png" alt=""></a>
+    </div>
+    <ul class="left-menu top list-unstyle">
+        <li class="">
+            <a class="ui-link" href="/">
+                <span class="ico shouye"></span>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/ydds">
+                <span class="ico chanpin"></span>
+                <span>麦多产品</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/fangan">
+                <span class="ico fangan"></span>
+                <span>解决方案</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/moban">
+                <span class="ico moban"></span>
+                <span>商城模板</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/service">
+                <span class="ico fuwu"></span>
+                <span>电商服务</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/news">
+                <span class="ico zixun"></span>
+                <span>电商资讯</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/contact">
+                <span class="ico lianxi"></span>
+                <span>联系我们</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/dj">
+                <span class="ico shiyong"></span>
+                <span>我要试用</span>
+            </a>
+        </li>
+    </ul>
+</div>    <div class="mainContent">
+    <div id="header">
     <a class="menu-1" class="ui-link" href="#">
         <img id="menu-button" src="/img/icon/menu.png">
     </a>
@@ -38,12 +93,14 @@
         </a>
     </div>
 
-                <div class="navigation"><a href="http://localhost:8000/news">资讯中心</a></div>
-        
+               <div id="page-title"><a href="/"><img id="logo" src="/img/icon/logo.png"></a></div>
+       
 </div>
+        <div class="close">
 
-
-    <div class="menu-2" class="clearfix">
+            
+            
+                <div class="menu-2" class="clearfix">
     <ul class="list-unstyle">
                 <li>
             <a class="active ui-link" href="http://localhost:8000/hynews">电商行业动态</a>
@@ -300,23 +357,36 @@
     <a href="javascript:void(0)" class="loadmore-data more" data-page="1" rel="nofollow">点击加载更多</a>
 </div>
 
+            <div id="footer-code">
+    <img src="/img/QR-code.png">
+</div>
+
 <div id="footer">
     <div id="telephone">
         <div id="tel-icon">
             <img src="/img/icon/tel.png" width="auto" height="100%">
         </div>
-        <div id="tel-number">4008-388-381</div>
+        <div id="tel-number"><a href="tel:4008-388-381">4008-388-381</a></div>
     </div>
+
     <div id="wechat">
         <div id="wechat-icon">
             <img src="/img/icon/wechat.png" width="auto" height="100%">
         </div>
-        <div id="wechat-number">mcmore888</div>
+        <div id="wechat-number"><a>mcmore888</a></div>
+
     </div>
 
-</div></div>
+</div>
+
+
+        </div>
+    </div>
+</div>
 <script src="http://localhost:8000/js/jquery.min.js"></script>
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
+<script src="http://localhost:8000/js/footer.js"></script>
+<script src="http://localhost:8000/js/leftmenu.js"></script>
 
     <script type="text/javascript">
         (function($) {

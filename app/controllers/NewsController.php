@@ -300,8 +300,8 @@ class NewsController extends BaseController {
             ->with('id', $id);
     }
 
-    public function postComment($id) {
-
+    public function postComment($id)
+    {
         $rules = array(
             'detail' => 'required|max:200',
             'captcha' => 'required|captcha'
@@ -318,7 +318,15 @@ class NewsController extends BaseController {
 
         if ($v->fails()) {
             /*return Redirect::route('news.comment', array('id' => $id))->withErrors($v)->withInput();*/
-            return Redirect::back()->withErrors($v)->withInput();
+          /*  return Redirect::back()->withErrors($v)->withInput();*/
+            $result['state'] = 0;
+            $errors = '<ul>';
+            foreach ($v->errors()->all() as $error) {
+                $errors .= "<li><i>{$error}</i></li>";
+            }
+            $errors .= '</ul>';
+            $result['msg'] = $errors;
+            return Response::json($result);
         }
 
         $comment = new Comment();
@@ -329,11 +337,22 @@ class NewsController extends BaseController {
         $comment->detail = Input::get('detail');
 
         if ($comment->save()) {
+            $result['state'] = 1;
+        } else {
+            $result['state'] = 0;
+            $result['msg'] = '系统出错，保存失败';
+        }
+
+
+        return Response::json($result);
+
+        /*if ($comment->save()) {
             return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));
         } else {
             return Redirect::back()->withErrors(array('error' => '系统错误，评论失败'))->withInput();
         }
 
         return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));
+    }*/
     }
 }
