@@ -27,7 +27,69 @@
 
 <body>
 <div id="main">
-<div id="header">
+    <div id="menu-bar-wrapper">
+    <div class="logo">
+        <a href="/"><img src="img/logo.png" alt=""></a>
+    </div>
+    <ul class="left-menu top list-unstyle">
+        <li class="">
+            <a class="ui-link" href="/">
+                <span class="ico shouye"></span>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="active">
+            <a class="ui-link" href="http://localhost:8000/ydds">
+                <span class="ico chanpin"></span>
+                <span>麦多产品</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/fangan">
+                <span class="ico fangan"></span>
+                <span>解决方案</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/moban">
+                <span class="ico moban"></span>
+                <span>商城模板</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/service">
+                <span class="ico fuwu"></span>
+                <span>电商服务</span>
+            </a>
+        </li>
+        <li class="active">
+            <a class="ui-link" href="http://localhost:8000/o2oshop">
+                <span class="ico fuwu"></span>
+                <span>定制开发</span>
+            </a>
+        </li>
+
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/news">
+                <span class="ico zixun"></span>
+                <span>电商资讯</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/contact">
+                <span class="ico lianxi"></span>
+                <span>联系我们</span>
+            </a>
+        </li>
+        <li class="">
+            <a class="ui-link" href="http://localhost:8000/dj">
+                <span class="ico shiyong"></span>
+                <span>我要试用</span>
+            </a>
+        </li>
+    </ul>
+</div>    <div class="mainContent">
+    <div id="header">
     <a class="menu-1" class="ui-link" href="#">
         <img id="menu-button" src="/img/icon/menu.png">
     </a>
@@ -38,12 +100,14 @@
         </a>
     </div>
 
-                <div class="navigation"><a href="http://localhost:8000/service">定制服务</a></div>
-        
+               <div id="page-title"><a href="/"><img id="logo" src="/img/icon/logo.png"></a></div>
+       
 </div>
+        <div class="close">
 
-
-<div class="menu-1" class="clearfix">
+            
+            
+            <div class="menu-1" class="clearfix">
     <ul class="list-unstyle">
         <li>
             <a class=" ui-link" href="http://localhost:8000/o2oshop">O2O商城</a>
@@ -97,32 +161,60 @@
 <div class="contact">
     <div class="cd-s2-title">了解更多微信商城系统解决方案</div>
     <div id="cd-s1-en">CONTACT US</div>
-    <div class="contact-form">
-        <form method="post" action="">
+    <div class="contact-form" id="register-form">
+        <form method="post">
+            <p class="form-tip"></p>
+            <input type="hidden" name="type" value="try" />
             <input type="text" name="name" placeholder="请输入您的姓名" />
-            <input type="text" name="telephone" placeholder="请输入您的联系电话" />
+            <input type="text" name="mobile" placeholder="请输入您的联系电话" />
             <input type="text" name="email" placeholder="请输入您的邮箱" />
-            <textarea rows="4"  name="consultation" placeholder="请输入您的咨询内容"></textarea>
-            <input type="submit" value="提交留言" />
+            <textarea rows="4"  name="detail" placeholder="请输入您的咨询内容"></textarea>
+            <input type="submit" class="message-submit" value="提交留言" />
         </form>
     </div>
-</div>  <div id="footer">
+</div>
+
+              <div id="footer-code">
+    <img src="/img/QR-code.png">
+</div>
+
+<div id="footer">
     <div id="telephone">
         <div id="tel-icon">
             <img src="/img/icon/tel.png" width="auto" height="100%">
         </div>
-        <div id="tel-number">4008-388-381</div>
+        <div id="tel-number"><a href="tel:4008-388-381">4008-388-381</a></div>
     </div>
+
     <div id="wechat">
         <div id="wechat-icon">
             <img src="/img/icon/wechat.png" width="auto" height="100%">
         </div>
-        <div id="wechat-number">mcmore888</div>
+        <div id="wechat-number"><a>mcmore888</a></div>
+
     </div>
 
-</div></div>
+</div>
+
+
+        </div>
+    </div>
+</div>
 <script src="http://localhost:8000/js/jquery.min.js"></script>
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
+<script src="http://localhost:8000/js/footer.js"></script>
+<script src="http://localhost:8000/js/leftmenu.js"></script>
+
+    
+    <script src="http://localhost:8000/js/consult_form.js"></script>
+
+    <script src="http://localhost:8000/js/sco/sco.message.js"></script>
+
+    <script src="http://localhost:8000/js/sco/sco.modal.js"></script>
+
+    <script src="http://localhost:8000/js/sco/sco.panes.js"></script>
+
+    <script src="http://localhost:8000/js/sco/sco.tab.js"></script>
 
 
  </body>

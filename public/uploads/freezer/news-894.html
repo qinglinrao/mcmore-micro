@@ -123,7 +123,7 @@
                 <div id="dynamics-brief-other">
                     <div id="dynamics-brief-time">2015-02-06 09:40</div>
                     <div id="dynamics-brief-comment">1</div>
-                    <div id="dynamics-brief-browse">70</div>
+                    <div id="dynamics-brief-browse">75</div>
                 </div>
             </div>
             <div class="dynamics-details-detailed">
@@ -172,7 +172,7 @@
 
            </li>
                       <li>
-                <a href="http://localhost:8000/faq-908" title="FAQ：微信商城怎么建设">FAQ：微信商城怎么建设</a>
+                <a href="http://localhost:8000/faq-909" title="FAQ：123网店系统有哪些">FAQ：123网店系统有哪些</a>
 
            </li>
                   </ul>
@@ -198,23 +198,25 @@
     <p class="form-tip"></p>
     <div id="i-want-comment">
 
-        
-        <form method="POST" action="http://localhost:8000/news/894/comment" accept-charset="UTF-8" id="comment-form1"><input name="_token" type="hidden" value="5nvfSMIdSKAhKfo7dAzgr3FCGyVNojWz55NmgB4Z">
-            <input type="text" class='comment-name' name="name" placeholder="请输入昵称">
-            <input type="text" class='comment-detail' name="detail" placeholder="请输入点评内容1">
-            <input type="submit" class='comment-submit' value="发表">
-            <div class="comment-captcha">
-                <span class="tag">
-                    验证码：
-                </span>
-                <input class="captch-con" name="captcha" type="text" value="">
-                <span class="captch-img">
-                   <img id="captcha-img" src="http://localhost:8000/captcha?186762" class="" onclick="refresh_captcha()"/><script type="text/javascript">function refresh_captcha(){jQuery("#captcha-img").attr("src","/captcha?"+Math.ceil(Math.random()*100000))}</script>
-                </span>
+                <div id="comment-form">
+            <form method="post">
+                <input type="text" class='comment-name' name="name" placeholder="请输入昵称">
+                <input type="text" class='comment-detail' name="detail" placeholder="请输入点评内容">
+                <input type="hidden" class='comment-id' name="comment-id" value="894">
+                <input type="submit" class='comment-submit' value="发表">
+                <div class="comment-captcha">
+                    <span class="tag">
+                        验证码：
+                    </span>
+                    <input class="captch-con" name="captcha" type="text" value="">
+                    <span class="captch-img">
+                       <img id="captcha-img" src="http://localhost:8000/captcha?118300" class="" onclick="refresh_captcha()"/><script type="text/javascript">function refresh_captcha(){jQuery("#captcha-img").attr("src","/captcha?"+Math.ceil(Math.random()*100000))}</script>
+                    </span>
 
-            </div>
+                </div>
 
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 
@@ -252,6 +254,15 @@
 <script src="http://localhost:8000/js/jquery.ScrollPic.js "></script>
 <script src="http://localhost:8000/js/footer.js"></script>
 <script src="http://localhost:8000/js/leftmenu.js"></script>
+
+    
+    <script type="text/javascript">
+        (function($) {
+            $.ajax({
+                url: 'http://localhost:8000/update-news-view-count/894'
+            })
+        })(jQuery)
+    </script>
 
     <script src="http://localhost:8000/js/comment.js"></script>
 

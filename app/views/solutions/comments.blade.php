@@ -19,31 +19,25 @@
             <li class="comment-column-middle">发表评论</li>
             <li class="comment-column-right">发表</li>
         </ul>--}}
+        <div id="comment-form">
+            <form method="post">
+                <input type="text" class='comment-name' name="name" placeholder="请输入昵称">
+                <input type="text" class='comment-detail' name="detail" placeholder="请输入点评内容">
+                <input type="hidden" class='comment-id' name="comment-id" value="{{$article->id}}">
+                <input type="submit" class='comment-submit' value="发表">
+                <div class="comment-captcha">
+                    <span class="tag">
+                        验证码：
+                    </span>
+                    {{ Form::text('captcha', '', array('class'=>'captch-con')) }}
+                    <span class="captch-img">
+                       {{AppHelper::captcha()}}
+                    </span>
 
-        {{ Form::open(['url'=>URL::route('news.comment', ['id'=>$article->id]), 'id'=>'comment-form1']) }}
-            <input type="text" class='comment-name' name="name" placeholder="请输入昵称">
-            <input type="text" class='comment-detail' name="detail" placeholder="请输入点评内容1">
-            <input type="submit" class='comment-submit' value="发表">
-            <div class="comment-captcha">
-                <span class="tag">
-                    验证码：
-                </span>
-                {{ Form::text('captcha', '', array('class'=>'captch-con')) }}
-                <span class="captch-img">
-                   {{AppHelper::captcha()}}
-                </span>
+                </div>
 
-            </div>
-
-        {{ Form::close() }}
+            </form>
+        </div>
     </div>
 </div>
 
-@section('scripts')
-    @parent
-    {{HTML::script('js/comment.js')}}
-    {{HTML::script('js/sco/sco.message.js')}}
-    {{HTML::script('js/sco/sco.modal.js')}}
-    {{HTML::script('js/sco/sco.panes.js')}}
-    {{HTML::script('js/sco/sco.tab.js')}}
-@stop

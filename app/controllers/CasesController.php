@@ -122,7 +122,15 @@ class CasesController extends BaseController {
 
         if ($v->fails()) {
 
-            return Redirect::route('case.comment', array('id' => $id))->withErrors($v)->withInput();
+           /* return Redirect::route('case.comment', array('id' => $id))->withErrors($v)->withInput();*/
+            $result['state'] = 0;
+            $errors = '<ul>';
+            foreach ($v->errors()->all() as $error) {
+                $errors .= "<li><i>{$error}</i></li>";
+            }
+            $errors .= '</ul>';
+            $result['msg'] = $errors;
+            return Response::json($result);
         }
 
         $comment = new Comment();
@@ -141,13 +149,22 @@ class CasesController extends BaseController {
 
         return View::make('case.comment');*/
 
-        if ($comment->save()) {
+       /* if ($comment->save()) {
             return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));
         } else {
             return Redirect::back()->withErrors(array('error' => '系统错误，评论失败'))->withInput();
         }
 
-        return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));
+        return Redirect::back()->withErrors(array('info' => '评论成功，需要后台审核。'));*/
+        if ($comment->save()) {
+            $result['state'] = 1;
+        } else {
+            $result['state'] = 0;
+            $result['msg'] = '系统出错，保存失败';
+        }
+
+
+        return Response::json($result);
     }
     
     public function getUpdateViewCount($id) 

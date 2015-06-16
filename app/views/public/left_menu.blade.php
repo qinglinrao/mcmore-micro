@@ -9,7 +9,7 @@
                 <span>首页</span>
             </a>
         </li>
-        <li class="{{Request::is('ydds*') ||Request::is('*shop')? 'active' : ''}}">
+        <li class="{{Request::is('ydds*')? 'active' : ''}}">
             <a class="ui-link" href="{{ URL::route('ydds') }}">
                 <span class="ico chanpin"></span>
                 <span>麦多产品</span>
@@ -33,6 +33,13 @@
                 <span>电商服务</span>
             </a>
         </li>
+        <li class="{{Request::is('*shop') ? 'active' : ''}}">
+            <a class="ui-link" href="{{ URL::route('pages',array('page_code'=>'o2oshop')) }}">
+                <span class="ico fuwu"></span>
+                <span>定制开发</span>
+            </a>
+        </li>
+
         <li class="{{Request::is('news*') ? 'active' : ''}}">
             <a class="ui-link" href="{{ URL::route('news') }}">
                 <span class="ico zixun"></span>

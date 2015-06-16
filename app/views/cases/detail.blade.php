@@ -12,6 +12,12 @@
             })
         })(jQuery)
     </script>
+
+    {{HTML::script('js/case.js')}}
+    {{HTML::script('js/sco/sco.message.js')}}
+    {{HTML::script('js/sco/sco.modal.js')}}
+    {{HTML::script('js/sco/sco.panes.js')}}
+    {{HTML::script('js/sco/sco.tab.js')}}
 @stop
 @section('content')
     <div id="case-detailed">

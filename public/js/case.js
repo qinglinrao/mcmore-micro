@@ -1,20 +1,20 @@
 (function ($) {
     $(document).ready(function () {
-        $('#comment-form form').submit(function () {
+        $('#comment-case form').submit(function () {
             var consulting = false;
             var id = $('.comment-id').val();
             var url = $(this).attr('action');
-            $submitField = $('#comment-form .comment-submit')
+            $submitField = $('#comment-case .comment-submit')
             $.ajax({
-                url: 'news/'+id+'/comment',
-                data: $('#comment-form form').serialize(),
+                url: 'case-'+id+'/comment',
+                data: $('#comment-case form').serialize(),
                 type: 'post',
                 dataType: 'json',
 
                 success: function (result) {
                     if (result.state == 1) {
                         $.scojs_message('评论成功，等待后台审核！', $.scojs_message.TYPE_OK);
-                        $('#comment-form form')[0].reset()
+                        $('#comment-case form')[0].reset()
                     } else if (result.state == 0) {
                         $.scojs_message(result.msg, $.scojs_message.TYPE_ERROR);
                     }

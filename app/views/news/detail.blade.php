@@ -3,6 +3,24 @@
 @section('title'){{ Seo::get('title')}}@stop
 @section('keywords'){{Seo::get('keywords')}}@stop
 @section('description'){{Seo::get('description')}}@stop
+
+@section('scripts')
+    @parent
+    <script type="text/javascript">
+        (function($) {
+            $.ajax({
+                url: '<?php echo URL::route("news.update", array("id" => $article->id)) ?>'
+            })
+        })(jQuery)
+    </script>
+
+    {{HTML::script('js/comment.js')}}
+    {{HTML::script('js/sco/sco.message.js')}}
+    {{HTML::script('js/sco/sco.modal.js')}}
+    {{HTML::script('js/sco/sco.panes.js')}}
+    {{HTML::script('js/sco/sco.tab.js')}}
+@stop
+
 @section('content')
         <div id="dynamics-detailed-header">
             <div class="ddh-back-arrow">

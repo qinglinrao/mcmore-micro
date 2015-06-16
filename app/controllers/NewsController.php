@@ -291,7 +291,7 @@ class NewsController extends BaseController {
     public function getUpdateViewCount($id)
     {
         DB::table('articles')->where('id', $id)->increment('view_count', 1);
-        Statistic::updateOfArticle($id);
+        //Statistic::updateOfArticle($id);
     }
 
     public function getComment($id)

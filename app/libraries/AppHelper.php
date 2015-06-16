@@ -97,13 +97,13 @@ class AppHelper {
     }
 
     /**
-     * 
+     *
      * @param array $array
      * @param string $type
      */
     public static function assets($array = array(), $type = '.css') {
         $assets = '';
-        if (Config::get('app.debug')) {
+        if (!Config::get('app.debug')) {
             if ($type == '.css') {
                 foreach ($array as $k => $asset) {
                     $array[$k] = HTML::style($asset);
@@ -136,19 +136,19 @@ class AppHelper {
         $url .="</url>\r\n";
         return $url;
     }
-    
+
     public static function outputAttr($attrsArray,$code){
         $attrs = array();
         // $count = $attrsArray->count();
         if(!$attrsArray) return;
-        
+
         foreach($attrsArray as $attr){
             if($attr->group && $attr->group->code == $code)
-                array_push($attrs, $attr->name);          
+                array_push($attrs, $attr->name);
         }
         return implode('，', $attrs);
     }
-    
+
     /**
      * 输出过滤链接
      * @param array $filter_ids  当前选中的过滤项id数组
@@ -161,30 +161,30 @@ class AppHelper {
         if($filter_id > 0)
             array_push($filter_ids,$filter_id);
         sort($filter_ids);
-      
+
         return URL::route('cases',  implode('_', $filter_ids));
     }
 
-    
-    
+
+
     /**
      * 递归所有筛选链接，for sitemap.xml
      */
-    
+
     public static function getFilterUrls($attrGroups, $count, $key, $filter_ids = [], &$sitemap){
 
         if ($key >= $count) return;
         $key ++;
-       
+
         foreach($attrGroups[$key-1]->attributes as $attribute){
             $filter_ids = array_diff($filter_ids,$attrGroups[$key-1]->attributes->lists('id'));
             array_push($filter_ids,$attribute->id);
             sort($filter_ids);
-            $sitemap[] = AppHelper::sitemapUrl(URL::route('cases',  implode('_', $filter_ids)), 'weekly', '0.7');            
+            $sitemap[] = AppHelper::sitemapUrl(URL::route('cases',  implode('_', $filter_ids)), 'weekly', '0.7');
             self::getFilterUrls($attrGroups, $count, $key, $filter_ids, $sitemap);
         }
-        
+
     }
-    
-   
+
+
 }
